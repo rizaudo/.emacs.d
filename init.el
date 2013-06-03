@@ -1,11 +1,9 @@
-
 (set-language-environment 'Japanese)
-
 (setq default-major-mode 'text-mode)
-
 (set-keyboard-coding-system 'euc-jp)
 (prefer-coding-system 'euc-jp)
-¡¡
+
+;use commonlisp
 (require 'cl)
 
 (require 'package)
@@ -15,12 +13,13 @@
 (package-initialize)
 
 
-
+;parenthesis
 (show-paren-mode t)
 
 (line-number-mode t)
 (column-number-mode t)
 
+;time setting
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time)
@@ -32,5 +31,5 @@
 (set-background-color "Black")
 (set-foreground-color "White")
 (set-cursor-color "White")
-(set-frame-parameter nil 'alpha 90)
+(set-frame-parameter nil 'alpha 80)
 
