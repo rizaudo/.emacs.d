@@ -1,4 +1,4 @@
-;emacs-setup Fri Jul  5 13:20:35 JST 2013
+;emacs-setup Fri Nov  8 02:45:53 2013
 
 
 (set-language-environment 'Japanese)
@@ -86,7 +86,7 @@
 (require 'multi-term)
 (setq multi-term-program "/bin/zsh")
 
-
+;;; あのビープ音を削除する
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 
@@ -109,10 +109,10 @@
 ;;;(set-background-color "Black")
 ;;;(set-foreground-color "White")
 ;;;(set-cursor-color "White")
-(set-frame-parameter nil 'alpha 65)
+(set-frame-parameter nil 'alpha 85)
 
 
-; kill -9 fuckin full-space!!!!!!!!!!!!!!!!!!
+; kill -9 fuckin em-space!!!!!!!!!!!!!!!!!!
 (global-whitespace-mode 1)
 
 (require 'whitespace)
@@ -130,7 +130,7 @@
 (set-face-background 'whitespace-space 'nil)
 (set-face-bold-p 'whitespace-space t)
 
-;;programming support library
+;;programming support 
 
 (require 'undo-tree)
 (global-undo-tree-mode)
@@ -162,7 +162,7 @@
 
 
 ;; my function
-(defun open-current-dir-with-finder  ()
-  (interactive)
-  (shell-command (concat "open .")))
-
+(when (eq system-type 'darwin)
+  (defun open-current-dir-with-finder  ()
+    (interactive)
+    (shell-command (concat "open ."))))
