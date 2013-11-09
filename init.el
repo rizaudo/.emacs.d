@@ -1,5 +1,9 @@
-;;;emacs-setup Fri Nov  8 02:45:53 2013
+;;; emacs-setup Sat Nov  9 12:29:18 2013
 ;;; for emacs 24.3(now)
+;;; 想定環境 Linux(Debian) Mac Windows
+;;; 外部に投げる場合や環境依存の物を使う場合、system-typeを見てunless
+;;; かwhenしましょう。 unlessよりは(when (not (eq system-type 'hoge)))
+;;; のほうが可読性良いかもしれない。
 (set-language-environment 'Japanese)
 (setq default-major-mode 'text-mode)
 (set-keyboard-coding-system 'utf-8)
@@ -106,6 +110,7 @@
 ;;;(set-cursor-color "White")
 (set-frame-parameter nil 'alpha 85)
 
+(set-cursor-color "Blue")
 
 ;;; kill -9 fuckin em-space!!!!!!!!!!!!!!!!!!
 (global-whitespace-mode 1)
@@ -137,9 +142,7 @@
 (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
 (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
 
-
 (require 'flymake)
-
 
 ;;src package setting
 (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
@@ -153,10 +156,9 @@
 (setq howm-menu-lang 'ja)
 (require 'howm-mode)
 
-
-
 ;; my function
 (when (eq system-type 'darwin)
   (defun open-current-dir-with-finder  ()
     (interactive)
     (shell-command (concat "open ."))))
+
