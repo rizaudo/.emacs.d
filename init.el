@@ -1,13 +1,9 @@
-;emacs-setup Fri Nov  8 02:45:53 2013
-
-
+;;;emacs-setup Fri Nov  8 02:45:53 2013
+;;; for emacs 24.3(now)
 (set-language-environment 'Japanese)
 (setq default-major-mode 'text-mode)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-
-;変更された時に自動でバッファ読み直し
-(global-auto-revert-mode 1)
 
 ;use commonlisp
 (with-no-warnings
@@ -22,17 +18,13 @@
        "http://orgmode,org/elpa/"))
 (package-initialize)
 
-;; alias emacs = emacsclient
-;;(require 'server)
-;;(unless (server-runnning p)
-;;  (server-start))
+;;;  alias emacs = emacsclient
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 (setq gc-cons-threshold (* 50 gc-cons-threshold))
 
-
-
-
 ;;外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
-
 (package-refresh-contents)
 
 (defvar my/favorite-packages
@@ -41,6 +33,7 @@
     starter-kit-lisp
     starter-kit-bindings
     starter-kit-eshell
+    ;; for Clojure settings
     clojure-mode
     clojure-project-mode
     clojure-test-mode
@@ -73,7 +66,6 @@
   (set-fontset-font "fontset-default"
                     'japanese-jisx0208
                     '("Hiragino Maru Gothic ProN"))
-  ;; 半角カナをヒラギノ角ゴProNにする
   (set-fontset-font "fontset-default"
                     'katakana-jisx0201
                     '("Hiragino Maru Gothic ProN")))
@@ -86,10 +78,13 @@
 (require 'multi-term)
 (setq multi-term-program "/bin/zsh")
 
+;;; other settings 
 ;;; あのビープ音を削除する
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 
+;変更された時に自動でバッファ読み直し
+(global-auto-revert-mode 1)
 
 ;parenthesis
 (show-paren-mode t)
@@ -112,7 +107,7 @@
 (set-frame-parameter nil 'alpha 85)
 
 
-; kill -9 fuckin em-space!!!!!!!!!!!!!!!!!!
+;;; kill -9 fuckin em-space!!!!!!!!!!!!!!!!!!
 (global-whitespace-mode 1)
 
 (require 'whitespace)
@@ -130,8 +125,8 @@
 (set-face-background 'whitespace-space 'nil)
 (set-face-bold-p 'whitespace-space t)
 
-;;programming support 
 
+;;;programming support 
 (require 'undo-tree)
 (global-undo-tree-mode)
 
@@ -147,7 +142,6 @@
 
 
 ;;src package setting
-
 (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
 (add-to-list 'exec-path "/Applications/VLC.app/Contents/MacOS")
 (autoload 'bongo "bongo"
