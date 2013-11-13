@@ -16,10 +16,13 @@
 ;;package config
 (require 'package)
 (add-to-list 'package-archives
-     '("marmalade" .
-       "http://marmalade-repo.org/packages/")
-     '("org" .
-       "http://orgmode,org/elpa/"))
+             '("marmalade" .
+               "http://marmalade-repo.org/packages/")
+             '("org" .
+               "http://orgmode,org/elpa/"))
+(add-to-list 'package-archives
+             '("melpa" .
+               "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 ;;;  alias emacs = emacsclient
@@ -53,6 +56,9 @@
     undo-tree
     yasnippet
 
+    ;; helm packages
+    helm
+    
     ;;term
     multi-term
 
@@ -145,6 +151,8 @@
 (require 'flymake)
 
 ;;src package setting
+
+;;; Bongo setting 
 (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
 (add-to-list 'exec-path "/Applications/VLC.app/Contents/MacOS")
 (autoload 'bongo "bongo"
@@ -158,7 +166,9 @@
 
 ;; my function
 (when (eq system-type 'darwin)
-  (defun open-current-dir-with-finder  ()
+  (defun open-current-dir-with-finder  () 
     (interactive)
     (shell-command (concat "open ."))))
 
+;;; (play-sound :file sound-current-dic+hoge :volume 0.3)
+;;; (setq sound-current-dic "/Users/keihosoya/.emacs.d/sound")
