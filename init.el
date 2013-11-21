@@ -167,7 +167,9 @@
 (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
 (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
 
-;;; (require 'flymake)
+
+(require 'flymake)
+(add-hook 'java-mode-hook 'flymake-mode-on)
 
 ;;src package setting
 
@@ -196,4 +198,4 @@
 ;;; (play-sound :file sound-current-dic+hoge :volume 0.3)
 ;;; (setq sound-current-dic "/Users/keihosoya/.emacs.d/sound")
 ;;; (add-hook 'after-save-hook '(lambda  (play-sound-file "~/.emacs.d/wav/SAMUEAI.wav")))
-
+;;; (copy-file "~/.emacs.d/init.el" "~/emacs-setup/init.el" t)
