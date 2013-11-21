@@ -29,7 +29,7 @@
 
 
 ;;; package config
-(req package 
+(req package
   (add-to-list 'package-archives
              '("marmalade" .
                "http://marmalade-repo.org/packages/")
@@ -38,7 +38,7 @@
   (add-to-list 'package-archives
              '("melpa" .
                "http://melpa.milkbox.net/packages/"))
-  (package-initialize)) 
+  (package-initialize))
 
 ;;外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
 (package-refresh-contents)
@@ -68,7 +68,6 @@
     auto-complete
     ;; helm packages
     helm
-    
     ;;term
     multi-term
 
@@ -99,16 +98,16 @@
 (req multi-term
   (setq multi-term-program "/bin/zsh"))
 
-(setq eshell-command-aliases-list
-      (append
-       (list
-        (list "ls" "ls -a"))
-        eshell-command-aliases-list))
+(quote (setq eshell-command-aliases-list
+             (append
+              (list
+               (list "ls" "ls -a"))
+              eshell-command-aliases-list)))
 
 ;;; 詳細設定
 
 (setq gc-cons-threshold (* 50 gc-cons-threshold))
-;;; other settings 
+;;; other settings
 ;;; あのビープ音を削除する
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
@@ -157,8 +156,7 @@
 (set-face-background 'whitespace-space 'nil)
 (set-face-bold-p 'whitespace-space t)
 
-
-;;;programming support 
+;;;programming support
 (req undo-tree
 (global-undo-tree-mode))
 
@@ -173,7 +171,7 @@
 
 ;;src package setting
 
-;;; Bongo setting 
+;;; Bongo setting
 (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
 (add-to-list 'exec-path "/Applications/VLC.app/Contents/MacOS")
 (autoload 'bongo "bongo"
@@ -188,11 +186,12 @@
 
 ;; my function
 (when (eq system-type 'darwin)
-  (defun open-current-dir-with-finder  () 
+  (defun open-current-dir-with-finder  ()
     (interactive)
     (shell-command (concat "open ."))))
 
 ;;; play-sound周りはわけ分からん
+;;; どうも同期的な関数っぽいので使えないっぽい
 
 ;;; (play-sound :file sound-current-dic+hoge :volume 0.3)
 ;;; (setq sound-current-dic "/Users/keihosoya/.emacs.d/sound")
