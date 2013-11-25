@@ -27,7 +27,6 @@
   (unless (server-running-p)
   (server-start)))
 
-
 ;;; package config
 (req package
   (add-to-list 'package-archives
@@ -56,6 +55,8 @@
     clojure-test-mode
     clojurescript-mode
     nrepl
+    rainbow-delimiters
+    paredit
 
     color-theme
     color-theme-molokai
@@ -92,9 +93,10 @@
 (req color-theme
   (load-theme 'misterioso t))
 
+(req raibow-delimiters
+     (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode))
 
 ;;; terminal
-
 ;;multi-tarm setting
 (req multi-term
   (setq multi-term-program "/bin/zsh"))
@@ -116,8 +118,11 @@
 ;変更された時に自動でバッファ読み直し
 (global-auto-revert-mode 1)
 
-;parenthesis
+;;;parenthesis
 (show-paren-mode t)
+(req paredit
+     (add-hook 'clojure-mode 'paredit-mode)
+     (add-hook 'nrepl-mode-hook 'paredit-mode))
 
 (line-number-mode t)
 (column-number-mode t)
@@ -131,7 +136,6 @@
 
 ;;; C-kで行全体を削除
 (setq kill-whole-line t)
-
 
 ;;; ウインドウの外見設定
 ;;;(set-background-color "Black")
@@ -169,8 +173,8 @@
 (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
 
 
-(require 'flymake)
-(add-hook 'java-mode-hook 'flymake-mode-on)
+(req flymake
+     (add-hook 'java-mode-hook 'flymake-mode-on))
 
 ;;src package setting
 
@@ -187,7 +191,7 @@
   (setq howm-menu-lang 'ja)
   (require 'howm-mode))
 
-;; my function
+;;; my function
 (when (eq system-type 'darwin)
   (defun open-current-dir-with-finder  ()
     (interactive)
