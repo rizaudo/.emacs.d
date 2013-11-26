@@ -64,6 +64,7 @@
     lua-mode
     project-mode
     rainbow-mode
+    org
     undo-tree
     yasnippet
 
