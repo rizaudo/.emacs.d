@@ -1,12 +1,12 @@
-;;; emacs-setup Sat Nov  9 12:29:18 2013
-;;; for emacs 24.3(now)
-;;; 基本的に例外が無い限り最新版を追うこととします
-;;; 想定環境 Linux(Debian) Mac Windows
-;;; 外部に投げる場合や環境依存の物を使う場合、system-typeを見てunless
-;;; かwhenしましょう。 unlessよりは(when (not (eq system-type 'hoge)))
-;;; のほうが可読性良いかもしれない。
-;;; 使っているシステムの情報
-;;; mac:darwin windows:windows-nt
+;;;; emacs-setup Sat Nov  9 12:29:18 2013
+;;;; for emacs 24.3(now)
+;;;; 基本的に例外が無い限り最新版を追うこととします
+;;;; 想定環境 Linux(Debian) Mac Windows
+;;;; 外部に投げる場合や環境依存の物を使う場合、system-typeを見てunless
+;;;; かwhenしましょう。 unlessよりは(when (not (eq system-type 'hoge)))
+;;;; のほうが可読性良いかもしれない。
+;;;; 使っているシステムの情報
+;;;; mac:darwin windows:windows-nt
 (set-language-environment 'Japanese)
 (setq default-major-mode 'text-mode)
 (set-keyboard-coding-system 'utf-8)
@@ -40,7 +40,7 @@
                "http://melpa.milkbox.net/packages/"))
   (package-initialize))
 
-;;外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
+;;;外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
 (package-refresh-contents)
 
 (defvar my/favorite-packages
@@ -55,6 +55,10 @@
     clojure-test-mode
     clojurescript-mode
     nrepl
+    cider
+    ac-nrepl
+    clojure-cheatsheet
+    clojure-snippets
     rainbow-delimiters
     paredit
 
@@ -64,7 +68,6 @@
     lua-mode
     project-mode
     rainbow-mode
-    org
     undo-tree
     yasnippet
 
@@ -77,7 +80,7 @@
     multiple-cursors
     ))
 
-;; my/favorite-packagesからインストールする
+;;; my/favorite-packagesからインストールする
 (dolist (package my/favorite-packages)
   (when (not (package-installed-p package))
     (package-install package)))
@@ -94,8 +97,6 @@
 (req color-theme
   (load-theme 'misterioso t))
 
-(req raibow-delimiters
-     (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode))
 
 ;;; terminal
 ;;multi-tarm setting
@@ -121,9 +122,14 @@
 
 ;;;parenthesis
 (show-paren-mode t)
+
+(req raibow-delimiters
+     (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode))
+
 (req paredit
      (add-hook 'clojure-mode 'paredit-mode)
-     (add-hook 'nrepl-mode-hook 'paredit-mode))
+     (add-hook 'nrepl-mode-hook 'paredit-mode)
+     (add-hook 'cider-repl-mode-hook 'paredit-mode))
 
 (line-number-mode t)
 (column-number-mode t)
@@ -164,15 +170,32 @@
 
 ;;;programming support
 (req undo-tree
-(global-undo-tree-mode))
+     (global-undo-tree-mode))
+
+;;; C-c M-c connect C-c M-j jack-in C-c C-q end
+(require 'cider)
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
+(ac-config-default)
+(setq ac-use-menu)
 (global-auto-complete-mode t)
 (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
 (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
 (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
 
+(req ac-nrepl
+     (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+     (add-hook 'cider-mode-hook 'ac-nrepl-setup)
+     (eval-after-load "auto-complete"
+       '(add-to-list 'ac-modes 'cider-repl-mode)))
+
+(req yasnippet
+     (yas-global-mode 1))
+
+(req clojure-snippets
+     (clojure-snippets-initialize))
 
 (req flymake
      (add-hook 'java-mode-hook 'flymake-mode-on))
@@ -197,6 +220,10 @@
   (defun open-current-dir-with-finder  ()
     (interactive)
     (shell-command (concat "open ."))))
+
+;;; keybind
+(global-set-key "\M-p" 'scroll-down-command)
+(global-set-key "\M-n" 'scroll-up-command)
 
 ;;; play-sound周りはわけ分からん
 ;;; どうも同期的な関数っぽいので使えないっぽい
