@@ -78,6 +78,8 @@
     multi-term
 
     multiple-cursors
+
+    org
     ))
 
 ;;; my/favorite-packagesからインストールする
@@ -200,7 +202,14 @@
 (req flymake
      (add-hook 'java-mode-hook 'flymake-mode-on))
 
-;;src package setting
+;;; test code
+(defun my-java-flymake-init ()
+  (list "javac" (list (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-with-folder-structure))))
+
+(add-to-list 'flymake-allowed-file-name-masks '("\\.java$" my-java-flymake-init flymake-simple-cleanup))
+
+;;;src package setting
 
 ;;; Bongo setting
 (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
