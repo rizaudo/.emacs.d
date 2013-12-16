@@ -22,6 +22,9 @@
   `(when (locate-library ,(symbol-name lib))
      (require ',lib) ,@body))
 
+(defmacro addlist (target &rest body)
+  `(mapcar '(lambda (x) (add-to-list ,target x)) ',body))
+
 ;;;  alias emacs = emacsclient
 (req server
   (unless (server-running-p)
