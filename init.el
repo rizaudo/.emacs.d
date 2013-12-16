@@ -77,9 +77,9 @@
     ;;term
     multi-term
 
-    multiple-cursors
+    tabber
 
-    org
+    multiple-cursors
     ))
 
 ;;; my/favorite-packagesからインストールする
@@ -147,6 +147,11 @@
 (setq kill-whole-line t)
 
 ;;; ウインドウの外見設定
+
+(require 'tabber)
+(tabbar-mode 1)
+
+
 ;;;(set-background-color "Black")
 ;;;(set-foreground-color "White")
 ;;;(set-cursor-color "White")
@@ -175,8 +180,8 @@
      (global-undo-tree-mode))
 
 ;;; C-c M-c connect C-c M-j jack-in C-c C-q end
-(require 'cider)
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(req cider
+     (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode))
 
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -199,17 +204,10 @@
 (req clojure-snippets
      (clojure-snippets-initialize))
 
-(req flymake
-     (add-hook 'java-mode-hook 'flymake-mode-on))
+(require 'flymake)
+(add-hook 'java-mode-hook 'flymake-mode-on)
 
-;;; test code
-(defun my-java-flymake-init ()
-  (list "javac" (list (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-with-folder-structure))))
-
-(add-to-list 'flymake-allowed-file-name-masks '("\\.java$" my-java-flymake-init flymake-simple-cleanup))
-
-;;;src package setting
+;;src package setting
 
 ;;; Bongo setting
 (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
