@@ -83,6 +83,7 @@
     tabber
 
     multiple-cursors
+    org
     ))
 
 ;;; my/favorite-packagesからインストールする
