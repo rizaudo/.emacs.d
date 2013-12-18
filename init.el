@@ -32,15 +32,13 @@
 
 ;;; package config
 (req package
-  (add-to-list 'package-archives
-             '("marmalade" .
-               "http://marmalade-repo.org/packages/"))
-  (add-to-list 'package-archives
-             '("org" .
-               "http://orgmode,org/elpa/"))
-  (add-to-list 'package-archives
-             '("melpa" .
-               "http://melpa.milkbox.net/packages/"))
+  (addlist 'package-archives
+             ("marmalade" .
+              "http://marmalade-repo.org/packages/")
+             ("org" .
+              "http://orgmode,org/elpa/")
+             ("melpa" .
+              "http://melpa.milkbox.net/packages/"))
   (package-initialize))
 
 ;;;外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
@@ -80,7 +78,7 @@
     ;;term
     multi-term
 
-    tabber
+    tabbar
 
     multiple-cursors
     org
@@ -152,8 +150,8 @@
 
 ;;; ウインドウの外見設定
 
-(require 'tabber)
-(tabbar-mode 1)
+(req 'tabbar
+     (tabbar-mode 1))
 
 
 ;;;(set-background-color "Black")
