@@ -150,7 +150,7 @@
 
 ;;; ウインドウの外見設定
 
-(req 'tabbar
+(req tabbar
      (tabbar-mode 1))
 
 
