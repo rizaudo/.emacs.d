@@ -12,7 +12,7 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;use commonlisp
+;;; use commonlisp
 (eval-when-compile
   (require 'cl))
 
@@ -25,7 +25,7 @@
 (defmacro addlist (target &rest body)
   `(mapcar '(lambda (x) (add-to-list ,target x)) ',body))
 
-;;;  alias emacs = emacsclient
+;;; alias emacs = emacsclient
 (req server
   (unless (server-running-p)
   (server-start)))
@@ -36,12 +36,12 @@
              ("marmalade" .
               "http://marmalade-repo.org/packages/")
              ("org" .
-              "http://orgmode,org/elpa/")
+              "http://orgmode.org/elpa/")
              ("melpa" .
               "http://melpa.milkbox.net/packages/"))
   (package-initialize))
 
-;;;外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
+;;; 外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
 (package-refresh-contents)
 
 (defvar my/favorite-packages
@@ -60,6 +60,7 @@
     ac-nrepl
     clojure-cheatsheet
     clojure-snippets
+
     rainbow-delimiters
     paredit
 
@@ -71,17 +72,25 @@
     rainbow-mode
     undo-tree
     yasnippet
-
     auto-complete
+    
     ;; helm packages
     helm
-    ;;term
+    helm-ag
+    helm-ls-git
+    
+    ;; term
     multi-term
 
     tabbar
 
     multiple-cursors
     org
+
+    ;; git
+    magit
+    git-gutter
+    
     ))
 
 ;;; my/favorite-packagesからインストールする
@@ -101,7 +110,6 @@
 (req color-theme
   (load-theme 'misterioso t))
 
-
 ;;; terminal
 ;;multi-tarm setting
 (req multi-term
@@ -116,8 +124,7 @@
 ;;; 詳細設定
 
 (setq gc-cons-threshold (* 50 gc-cons-threshold))
-;;; other settings
-;;; あのビープ音を削除する
+
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 
@@ -138,7 +145,7 @@
 (line-number-mode t)
 (column-number-mode t)
 
-;time setting
+;;; time setting
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time)
@@ -153,10 +160,9 @@
 (req tabbar
      (tabbar-mode 1))
 
-
-;;;(set-background-color "Black")
-;;;(set-foreground-color "White")
-;;;(set-cursor-color "White")
+;;; (set-background-color "Black")
+;;; (set-foreground-color "White")
+;;; (set-cursor-color "White")
 (set-frame-parameter nil 'alpha 85)
 (set-cursor-color "Blue")
 
@@ -177,7 +183,7 @@
 (set-face-background 'whitespace-space 'nil)
 (set-face-bold-p 'whitespace-space t)
 
-;;;programming support
+;;; programming support
 (req undo-tree
      (global-undo-tree-mode))
 
@@ -220,16 +226,17 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
 
-;;src package setting
+;;; src package setting
 
 ;;; Bongo setting
-(add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
-(add-to-list 'exec-path "/Applications/VLC.app/Contents/MacOS")
-(autoload 'bongo "bongo"
-  "Start Bongo by switching to a Bongo buffer." t)
-(setq bongo-enabled-backends '(vlc))
+(when (eq system-type 'darwin)
+  (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
+  (add-to-list 'exec-path "/Applications/VLC.app/Contents/MacOS")
+  (autoload 'bongo "bongo"
+    "Start Bongo by switching to a Bongo buffer." t)
+  (setq bongo-enabled-backends '(vlc)))
 
-;; howm
+;;; howm
 (when (eq system-type 'darwin)
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
   (setq howm-menu-lang 'ja)
