@@ -12,7 +12,7 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;use commonlisp
+;;; use commonlisp
 (eval-when-compile
   (require 'cl))
 
@@ -24,6 +24,14 @@
 
 (defmacro addlist (target &rest body)
   `(mapcar '(lambda (x) (add-to-list ,target x)) ',body))
+
+;;; (lazyload (triger-function　...) "filename" &rest body)
+(defmacro lazyload (func lib &rest body)
+  `(when (locate-library ,lib)
+     ,@(mapcar (lambda (f) `(autoload ',f ,lib nil t)) func)
+     (eval-after-load ,lib
+       '(progn
+          ,@body)) t))
 
 ;;;  alias emacs = emacsclient
 (req server
@@ -62,6 +70,7 @@
     clojure-snippets
     rainbow-delimiters
     paredit
+    smartparens
 
     color-theme
     color-theme-molokai
@@ -75,6 +84,8 @@
     auto-complete
     ;; helm packages
     helm
+    helm-ag
+    helm-ls-git
     ;;term
     multi-term
 
@@ -134,6 +145,10 @@
      (add-hook 'clojure-mode 'paredit-mode)
      (add-hook 'nrepl-mode-hook 'paredit-mode)
      (add-hook 'cider-repl-mode-hook 'paredit-mode))
+
+(req smartparens
+     (req smartparens-config))
+
 
 (line-number-mode t)
 (column-number-mode t)
