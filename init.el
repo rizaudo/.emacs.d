@@ -25,8 +25,6 @@
 (defmacro addlist (target &rest body)
   `(mapcar '(lambda (x) (add-to-list ,target x)) ',body))
 
-<<<<<<< HEAD
-
 ;;; (lazyload (triger-function　...) "filename" &rest body)
 (defmacro lazyload (func lib &rest body)
   `(when (locate-library ,lib)
