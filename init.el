@@ -39,6 +39,7 @@
   (server-start)))
 
 ;;; package config
+;;; もっと良いパッケージ管理を使いたい
 (req package
   (addlist 'package-archives
              ("marmalade" .
@@ -48,10 +49,7 @@
              ("melpa" .
               "http://melpa.milkbox.net/packages/"))
   (package-initialize))
-
 ;;; 外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
-(package-refresh-contents)
-
 (defvar my/favorite-packages
   '(
     starter-kit
@@ -102,11 +100,14 @@
     git-gutter
     
     ))
+;(package-refresh-contents)
+
 
 ;;; my/favorite-packagesからインストールする
-(dolist (package my/favorite-packages)
-  (when (not (package-installed-p package))
-    (package-install package)))
+(defun  set-pac ()
+  (dolist (package my/favorite-packages)
+    (when (not (package-installed-p package))
+      (package-install package))))
 
 (when (eq system-type 'darwin)
   (set-face-attribute 'default nil :family "Consolas")
@@ -117,8 +118,44 @@
                     'katakana-jisx0201
                     '("Hiragino Maru Gothic ProN")))
 
+;;; pref setting
+(autoload 'gomoku 			"gomoku" "" t)
+(autoload 'calendar 			"calendar" "" t)
+(autoload 'find-elisp-file 		"menu" "" t)
+(autoload 'find-file-using-menu 	"menu" "" t)
+(autoload 'electric-buffer-list 	"ebuff-menu" "" t)
+(autoload 'electric-command-history 	"echistory" "" t)
+(autoload 'run-dbx 			"dbx" "" t)
+(autoload 'gnus				"gnus" "" t)
+(autoload 'another-shell 		"a-sh" "run another shell." t)
+(autoload 'new-lisp-complete-symbol 	"lisp-complete" "" t)
+(autoload 'kcl-help 			"kcl-help" "" t)
+(autoload 'kcl-help* 			"kcl-help" "" t)
+(autoload 'insert-reference-char-region "inseart-ref" "" t)
+(autoload 'hide-ifdef-mode		"hideif" "" t)
+(autoload 'c++-mode			"c++" "" t)
+(autoload 'yacc-mode 			"yacc-mode" "" t)
+(autoload 'vman 			"vman" "" t)
+(autoload 'klpr-buffer 			"klp" "" t)
+(autoload 'klpr-region 			"klp" "" t)
+(autoload 'read-file-compressed		"z-mode" "" t)
+(autoload 'after-find-file-compressed	"z-mode" "" t)
+(autoload 'dired-find-file-compressed	"z-mode" "" t)
+(autoload 'monkey-directory		"monkey" "" t)
+(autoload 'browse-yank			"byank" "" t)
+(autoload 'electric-shell-history	"eshistory" "" t)
+(autoload 'lisp-hide-sexp		"lisp-hide" "" t)
+;(autoload 'vn 				"vn" "" t)
+;(autoload 'template-mode 		"template" "" t)
+(autoload 'run-idraw "idraw-mode" nil t) ;kanji input for idraw
+(autoload 'webster   		      	"webster" "" t)
+(autoload 'webster-spell	      	"webster" "" t)
+(autoload 'html-helper-mode "html-helper-mode" "HTML Helper Mode" t)
+(autoload 'html-mode "html-mode" "HTML Mode" t)
+
+
 (req color-theme
-  (load-theme 'misterioso t))
+     (load-theme 'misterioso t))
 
 ;;; terminal
 ;;multi-tarm setting
