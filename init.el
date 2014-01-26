@@ -39,6 +39,7 @@
   (server-start)))
 
 ;;; package config
+
 ;;; もっと良いパッケージ管理を使いたい
 (req package
   (addlist 'package-archives
@@ -49,7 +50,11 @@
              ("melpa" .
               "http://melpa.milkbox.net/packages/"))
   (package-initialize))
+
+
 ;;; 外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
+(package-refresh-contents)
+
 (defvar my/favorite-packages
   '(
     starter-kit
@@ -82,6 +87,7 @@
     auto-complete
     flycheck
     
+    
     ;; helm packages
     helm
     helm-ag
@@ -100,14 +106,15 @@
     git-gutter
     
     ))
-;(package-refresh-contents)
 
+;(package-refresh-contents)
 
 ;;; my/favorite-packagesからインストールする
 (defun  set-pac ()
   (dolist (package my/favorite-packages)
     (when (not (package-installed-p package))
       (package-install package))))
+
 
 (when (eq system-type 'darwin)
   (set-face-attribute 'default nil :family "Consolas")
@@ -117,6 +124,7 @@
   (set-fontset-font "fontset-default"
                     'katakana-jisx0201
                     '("Hiragino Maru Gothic ProN")))
+
 
 ;;; pref setting
 (autoload 'gomoku 			"gomoku" "" t)
@@ -156,6 +164,7 @@
 
 (req color-theme
      (load-theme 'misterioso t))
+
 
 ;;; terminal
 ;;multi-tarm setting
@@ -265,6 +274,7 @@
 
 (req flymake
      (add-hook 'java-mode-hook 'flymake-mode-on))
+
 (req flycheck)
 
 
