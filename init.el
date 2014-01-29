@@ -53,8 +53,6 @@
 
 
 ;;; 外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
-(package-refresh-contents)
-
 (defvar my/favorite-packages
   '(
     starter-kit
