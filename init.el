@@ -161,7 +161,9 @@
 
 
 (req color-theme
-     (load-theme 'misterioso t))
+     ;(load-theme 'github t)
+     )
+(req 'color-theme-github)
 
 
 ;;; terminal
