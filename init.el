@@ -76,6 +76,7 @@
 
     color-theme
     color-theme-molokai
+    color-theme-github
 
     lua-mode
     project-mode
@@ -161,7 +162,7 @@
 
 
 (req color-theme
-     ;(load-theme 'github t)
+     ;(load-theme 'misterioso t)
      )
 (req 'color-theme-github)
 
