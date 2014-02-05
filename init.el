@@ -287,15 +287,6 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;;; src package setting
-
-;;; Bongo setting
-(when (eq system-type 'darwin)
-  (add-to-list 'load-path "/Users/keihosoya/.emacs.d/src/bongo")
-  (add-to-list 'exec-path "/Applications/VLC.app/Contents/MacOS")
-  (autoload 'bongo "bongo"
-    "Start Bongo by switching to a Bongo buffer." t)
-  (setq bongo-enabled-backends '(vlc)))
-
 ;;; howm
 (when (eq system-type 'darwin)
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
