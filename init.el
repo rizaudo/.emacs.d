@@ -85,13 +85,10 @@
     yasnippet
     auto-complete
     flycheck
-    
-    
     ;; helm packages
     helm
     helm-ag
     helm-ls-git
-    
     ;; term
     multi-term
 
@@ -103,7 +100,6 @@
     ;; git
     magit
     git-gutter
-    
     ))
 
 ;(package-refresh-contents)
@@ -164,7 +160,7 @@
 (req color-theme
      ;(load-theme 'misterioso t)
      )
-(req 'color-theme-github)
+(req color-theme-github)
 
 
 ;;; terminal
