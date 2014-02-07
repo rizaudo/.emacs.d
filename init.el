@@ -163,6 +163,11 @@
 (req color-theme-github)
 
 
+;;; Git
+(req git-gutter
+     (global-git-gutter-mode t)
+     (setq git-gutter:update-hooks '(after-save-hook after-revert-hook)))
+
 ;;; terminal
 ;;multi-tarm setting
 (req multi-term
