@@ -121,7 +121,7 @@
                     '("Hiragino Maru Gothic ProN")))
 
 
-;;; pref setting
+;;; pref setting  by Dr.Yas
 (autoload 'gomoku 			"gomoku" "" t)
 (autoload 'calendar 			"calendar" "" t)
 (autoload 'find-elisp-file 		"menu" "" t)
@@ -156,6 +156,8 @@
 (autoload 'html-helper-mode "html-helper-mode" "HTML Helper Mode" t)
 (autoload 'html-mode "html-mode" "HTML Mode" t)
 
+
+(req esup)
 
 (req color-theme
      ;(load-theme 'misterioso t)
