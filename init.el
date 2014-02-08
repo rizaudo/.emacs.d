@@ -76,7 +76,6 @@
 
     color-theme
     color-theme-molokai
-    color-theme-github
 
     lua-mode
     project-mode
@@ -161,9 +160,9 @@
      (autoload 'esup "esup" "Emacs Start Up Profiler." nil))
 
 (req color-theme
-     ;(load-theme 'misterioso t)
+     (load-theme 'misterioso t)
      )
-(req color-theme-github)
+
 
 
 ;;; Git
@@ -189,8 +188,11 @@
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 
-;変更された時に自動でバッファ読み直し
+;;;変更された時に自動でバッファ読み直し
 (global-auto-revert-mode 1)
+
+;;; auto-saveファイルを削除する
+(setq delete-auto-save-file t)
 
 ;;;parenthesis
 (show-paren-mode t)
