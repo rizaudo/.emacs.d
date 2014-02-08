@@ -83,6 +83,10 @@
     undo-tree
     yasnippet
     auto-complete
+    ac-c-headers
+    ac-cider-compliment
+    ac-helm
+    
     flycheck
     ;; helm packages
     helm
