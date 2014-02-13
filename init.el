@@ -41,6 +41,7 @@
 ;;; package config
 
 ;;; もっと良いパッケージ管理を使いたい
+;;; need el-get
 (req package
   (addlist 'package-archives
              ("marmalade" .
@@ -159,6 +160,8 @@
 (autoload 'html-helper-mode "html-helper-mode" "HTML Helper Mode" t)
 (autoload 'html-mode "html-mode" "HTML Mode" t)
 
+;;; emacs lisp setting
+;;; M-. 定義元へ M-, 元居た位置へ C-c C-d C-d カーソル下のドキュメント表示
 
 (req esup
      (autoload 'esup "esup" "Emacs Start Up Profiler." nil))
@@ -175,7 +178,7 @@
      (setq git-gutter:update-hooks '(after-save-hook after-revert-hook)))
 
 ;;; terminal
-;;multi-tarm setting
+;;; multi-tarm setting
 (req multi-term
   (setq multi-term-program "/bin/zsh"))
 
