@@ -41,6 +41,7 @@
 ;;; package config
 
 ;;; もっと良いパッケージ管理を使いたい
+;;; need el-get
 (req package
   (addlist 'package-archives
              ("marmalade" .
@@ -175,7 +176,7 @@
      (setq git-gutter:update-hooks '(after-save-hook after-revert-hook)))
 
 ;;; terminal
-;;multi-tarm setting
+;;; multi-tarm setting
 (req multi-term
   (setq multi-term-program "/bin/zsh"))
 
