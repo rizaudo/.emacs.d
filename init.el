@@ -93,6 +93,7 @@
     helm
     helm-ag
     helm-ls-git
+    helm-descbinds
     ;; term
     multi-term
 
