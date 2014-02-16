@@ -38,6 +38,23 @@
   (unless (server-running-p)
   (server-start)))
 
+;;; 詳細設定
+
+(setq gc-cons-threshold (* 50 gc-cons-threshold))
+
+(setq visible-bell t)
+(setq ring-bell-function 'ignore)
+
+;;;変更された時に自動でバッファ読み直し
+(global-auto-revert-mode 1)
+
+;;; auto-saveファイルを削除する
+(setq delete-auto-save-file t)
+
+;;;parenthesis
+(show-paren-mode t)
+
+
 ;;; package config
 
 ;;; もっと良いパッケージ管理を使いたい
@@ -183,27 +200,14 @@
 (req multi-term
   (setq multi-term-program "/bin/zsh"))
 
+;;; eshell setting
+
 (quote (setq eshell-command-aliases-list
              (append
               (list
                (list "ls" "ls -a"))
               eshell-command-aliases-list)))
 
-;;; 詳細設定
-
-(setq gc-cons-threshold (* 50 gc-cons-threshold))
-
-(setq visible-bell t)
-(setq ring-bell-function 'ignore)
-
-;;;変更された時に自動でバッファ読み直し
-(global-auto-revert-mode 1)
-
-;;; auto-saveファイルを削除する
-(setq delete-auto-save-file t)
-
-;;;parenthesis
-(show-paren-mode t)
 
 (req raibow-delimiters
      (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode))
