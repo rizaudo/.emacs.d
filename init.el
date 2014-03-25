@@ -34,9 +34,10 @@
           ,@body)) t))
 
 ;;; alias emacs = emacsclient
-(req server
-  (unless (server-running-p)
-  (server-start)))
+(when (eq system-type 'gnu/linux)
+  (req server
+       (unless (server-running-p)
+         (server-start))))
 
 ;;; 詳細設定
 
