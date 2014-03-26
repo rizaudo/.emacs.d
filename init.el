@@ -129,6 +129,8 @@
 
 ;;; my/favorite-packagesからインストールする
 (defun  set-pac ()
+  "my package install command"
+  (interactive)
   (dolist (package my/favorite-packages)
     (when (not (package-installed-p package))
       (package-install package))))
