@@ -137,7 +137,7 @@
 
 
 (when (eq system-type 'darwin)
-  (set-face-attribute 'default nil :family "Ricty Diminished")
+  (set-face-attribute 'default nil :family "Ricty Diminished" :height 150)
   (set-fontset-font "fontset-default"
                     'japanese-jisx0208
                     '("Ricty Diminished"))
