@@ -123,6 +123,8 @@
     ;; git
     magit
     git-gutter
+
+    esup
     ))
 
 ;(package-refresh-contents)
