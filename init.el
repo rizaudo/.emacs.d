@@ -133,6 +133,7 @@
 (defun  set-pac ()
   "my package install command"
   (interactive)
+  (package-refresh-contents)
   (dolist (package my/favorite-packages)
     (when (not (package-installed-p package))
       (package-install package))))
