@@ -7,6 +7,9 @@
 ;;;; のほうが可読性良いかもしれない。
 ;;;; 使っているシステムの情報
 ;;;; mac:darwin windows:windows-nt
+;;; TODO
+;;; to autoload: git-gutter,cider,yasnippet,
+
 (set-language-environment 'Japanese)
 (setq default-major-mode 'text-mode)
 (set-keyboard-coding-system 'utf-8)
@@ -71,7 +74,6 @@
   (package-initialize))
 
 
-;;; 外部へのIOはコストが高すぎる。　二度目のevalがされないように何かしらの対策をすることが必要である。
 (defvar my/favorite-packages
   '(
     starter-kit
