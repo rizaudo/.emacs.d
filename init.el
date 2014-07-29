@@ -25,6 +25,7 @@
   `(when (locate-library ,(symbol-name lib))
      (require ',lib) ,@body))
 
+;;; need fix
 (defmacro addlist (target &rest body)
   `(mapcar '(lambda (x) (add-to-list ,target x)) ',body))
 
@@ -151,7 +152,7 @@
       (package-install package))))
 
 
-(when (eq system-type 'darwin)
+(when (and (eq system-type 'darwin) (not (eq window-system nil)))
   (set-face-attribute 'default nil :family "Ricty Diminished" :height 150)
   (set-fontset-font "fontset-default"
                     'japanese-jisx0208
@@ -378,6 +379,7 @@
 (global-set-key "\M-p" 'scroll-down-command)
 (global-set-key "\M-n" 'scroll-up-command)
 
+
 ;;; play-sound周りはわけ分からん
 ;;; どうも同期的な関数っぽいので使えないっぽい
 
@@ -385,3 +387,14 @@
 ;;; (setq sound-current-dic "/Users/keihosoya/.emacs.d/sound")
 ;;; (add-hook 'after-save-hook '(lambda  (play-sound-file "~/.emacs.d/wav/SAMUEAI.wav")))
 ;;; (copy-file "~/.emacs.d/init.el" "~/emacs-setup/init.el" t)
+
+(setenv "TMPDIR" ".")
+(setq temporary-file-directory "/Users/keihosoya/tmp")
+(setq debug-on-error t
+      debug-on-signal nil)
+
+
+
+
+
+
