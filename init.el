@@ -270,22 +270,23 @@
 (set-frame-parameter nil 'alpha 85)
 (set-cursor-color "Blue")
 
-(require 'whitespace)
+(req whitespace
 ;;; kill -9 fuckin em-space!!!!!!!!!!!!!!!!!!
-(global-whitespace-mode 1)
-(setq whitespace-style '(face tabs tab-mark spaces space-mark))
-(setq whitespace-display-mappings
-       ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
-      '(
-        (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
-        (newline-mark 10 [182 10]) ; 10 LINE FEED
-        ))
-(set-face-foreground 'whitespace-tab "#adff2f")
-(set-face-background 'whitespace-tab 'nil)
-(set-face-underline  'whitespace-tab t)
-(set-face-foreground 'whitespace-space "#7cfc00")
-(set-face-background 'whitespace-space 'nil)
-(set-face-bold-p 'whitespace-space t)
+     (global-whitespace-mode 1)
+     (setq whitespace-style '(face tabs tab-mark spaces space-mark))
+     (setq whitespace-display-mappings
+           ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
+           '(
+             (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+             (newline-mark 10 [182 10]) ; 10 LINE FEED
+             ))
+     (when (not (eq window-system nil))
+       (set-face-foreground 'whitespace-tab "#adff2f")
+       (set-face-background 'whitespace-tab 'nil)
+       (set-face-underline  'whitespace-tab t)
+       (set-face-foreground 'whitespace-space "#7cfc00")
+       (set-face-background 'whitespace-space 'nil)
+       (set-face-bold-p 'whitespace-space t)))
 
 ;;; programming support
 (req undo-tree
