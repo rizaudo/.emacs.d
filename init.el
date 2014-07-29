@@ -73,13 +73,18 @@
               "http://melpa.milkbox.net/packages/"))
   (package-initialize))
 
-
+;;; #PACLIST#
 (defvar my/favorite-packages
   '(
     starter-kit
     starter-kit-lisp
     starter-kit-bindings
     starter-kit-eshell
+
+    ;; emacs lisp lib
+    deferred
+    dash
+    
     ;; for Clojure settings
     clojure-mode
     clojure-project-mode
@@ -121,13 +126,18 @@
 
     multiple-cursors
     org
+    org-plus-contrib
+    
 
     ;; git
     magit
     git-gutter
 
     esup
+    htmlize
     ))
+
+;;; org 2 bibtex でbibtex2htmlを要求してた
 
 ;(package-refresh-contents)
 
