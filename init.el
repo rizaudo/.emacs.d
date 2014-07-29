@@ -337,12 +337,36 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;;; Org-mode
+(req ox-latex
+     (require 'ox-bibtex)
+     (setq org-latex-pdf-process
+      '("platex %f"
+        "platex %f"
+        "bibtex %b"
+        "platex %f"
+        "platex %f"
+        "dvipdfmx %b.dvi"))
+     (setq org-latex-with-hyperref nil)
+     (add-to-list 'org-latex-classes
+             '("thesis"
+               "\\documentclass{jarticle}
+                [NO-PACKAGES]
+                [NO-DEFAULT-PACKAGES]
+                \\usepackage[dvipdfmx]{graphicx}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
+
 ;;; src package setting
 ;;; howm
 (when (eq system-type 'darwin)
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
   (setq howm-menu-lang 'ja)
-  (require 'howm-mode))
+  (require 'howm))
 
 ;;; my function
 (when (eq system-type 'darwin)
