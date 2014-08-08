@@ -342,16 +342,11 @@
 (req ox-latex
      (require 'ox-bibtex)
      (setq org-latex-pdf-process
-      '("platex %f"
-        "platex %f"
-        "bibtex %b"
-        "platex %f"
-        "platex %f"
-        "dvipdfmx %b.dvi"))
+           '("latexmk %f"))
      (setq org-latex-with-hyperref nil)
      (add-to-list 'org-latex-classes
              '("thesis"
-               "\\documentclass{jarticle}
+               "\\documentclass[a4j]{jarticle}
                 [NO-PACKAGES]
                 [NO-DEFAULT-PACKAGES]
                 \\usepackage[dvipdfmx]{graphicx}"
