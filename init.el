@@ -243,6 +243,15 @@
      (add-hook 'nrepl-mode-hook 'paredit-mode)
      (add-hook 'cider-repl-mode-hook 'paredit-mode))
 
+(defun paredit-wrap-round-from-behind ()
+  (interactive)
+  (forward-sexp -1)
+  (paredit-wrap-round)
+  (insert " ")
+  (forward-char -1))
+(define-key paredit-mode-map (kbd "M-)")
+  'paredit-wrap-round-from-behind)
+
 (req smartparens
      (req smartparens-config))
 
