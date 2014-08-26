@@ -52,6 +52,7 @@
 
 ;;;変更された時に自動でバッファ読み直し
 (global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
 
 ;;; auto-saveファイルを削除する
 (setq delete-auto-save-file t)
@@ -211,8 +212,7 @@
      (autoload 'esup "esup" "Emacs Start Up Profiler." nil))
 
 (req color-theme
-     (load-theme 'misterioso t)
-     )
+     (load-theme 'misterioso t))
 
 
 
