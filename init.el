@@ -99,6 +99,10 @@
     slamhound
     typed-clojure-mode
 
+    ;; OCaml setting
+    tuareg
+    merlin
+
     rainbow-delimiters
     paredit
     smartparens
@@ -336,6 +340,12 @@
 
 (req flycheck)
 
+;;; OCaml support
+(setq auto-mode-alist
+      (cons '("\\.ml[iylp]?$" . caml-mode) auto-mode-alist))
+(autoload 'caml-mode "caml" "Major mode for editing Caml code." t)
+(autoload 'run-caml "inf-caml" "Run an inferior Caml process." t)
+(setq inferior-caml-program "/usr/local/bin/ocaml")
 
 ;;; test code
 (defun my-java-flymake-init ()
