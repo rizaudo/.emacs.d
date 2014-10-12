@@ -90,7 +90,6 @@
     ;; for Clojure settings
     clojure-mode
     clojure-project-mode
-    clojure-test-mode
     clojurescript-mode
     nrepl
     cider
