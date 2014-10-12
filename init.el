@@ -96,6 +96,8 @@
     ac-nrepl
     clojure-cheatsheet
     clojure-snippets
+    slamhound
+    typed-clojure-mode
 
     rainbow-delimiters
     paredit
