@@ -378,11 +378,11 @@
 
 
 ;;; src package setting
-;;; howm
 (when (eq system-type 'darwin)
+  ;; howm
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
-  (setq howm-menu-lang 'ja)
-  (require 'howm))
+  (req howm
+       (setq howm-menu-lang 'ja))
   ;; proof general
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/ProofGeneral"))
 
