@@ -383,6 +383,8 @@
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
   (setq howm-menu-lang 'ja)
   (require 'howm))
+  ;; proof general
+  (add-to-list 'load-path "/usr/share/emacs/site-lisp/ProofGeneral"))
 
 ;;; my function
 (when (eq system-type 'darwin)
