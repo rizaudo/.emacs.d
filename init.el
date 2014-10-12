@@ -326,7 +326,7 @@
        '(add-to-list 'ac-modes 'cider-repl-mode)))
 
 (req yasnippet
-     (yas-global-mode 1))
+     (yas-global-mode 0))
 
 (req clojure-snippets
      (clojure-snippets-initialize))
