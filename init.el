@@ -326,11 +326,11 @@
      (eval-after-load "auto-complete"
        '(add-to-list 'ac-modes 'cider-repl-mode)))
 
-(req yasnippet
-     (yas-global-mode 0))
+;; (req yasnippet
+;;      (yas-global-mode 0))
 
-(req clojure-snippets
-     (clojure-snippets-initialize))
+;; (req clojure-snippets
+;;      (clojure-snippets-initialize))
 
 (req flymake
      (add-hook 'java-mode-hook 'flymake-mode-on))
