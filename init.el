@@ -129,8 +129,6 @@
     ;; term
     multi-term
 
-    tabbar
-
     multiple-cursors
     org
     org-plus-contrib
@@ -276,8 +274,8 @@
 
 ;;; ウインドウの外見設定
 
-(req tabbar
-     (tabbar-mode 1))
+;; (req tabbar
+;;      (tabbar-mode 1))
 
 ;;; (set-background-color "Black")
 ;;; (set-foreground-color "White")
