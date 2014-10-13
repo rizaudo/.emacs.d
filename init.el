@@ -211,8 +211,7 @@
 ;;; emacs lisp setting
 ;;; M-. 定義元へ M-, 元居た位置へ C-c C-d C-d カーソル下のドキュメント表示
 
-(req esup
-     (autoload 'esup "esup" "Emacs Start Up Profiler." nil))
+(autoload 'esup "esup"  nil t)
 
 (req color-theme
      (load-theme 'misterioso t))
