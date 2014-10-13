@@ -225,8 +225,8 @@
 
 ;;; terminal
 ;;; multi-tarm setting
-(req multi-term
-  (setq multi-term-program "/bin/zsh"))
+(autoload 'multi-term  "multi-term" nil t)
+(setq multi-term-program "/bin/zsh")
 
 ;;; eshell setting
 
