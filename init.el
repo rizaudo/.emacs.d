@@ -357,7 +357,7 @@
 
 ;;; Org-mode
 (req ox-latex
-     (require 'ox-bibtex)
+     (req ox-bibtex)
      (setq org-latex-pdf-process
            '("latexmk %f"))
      (setq org-latex-with-hyperref nil)
