@@ -275,14 +275,14 @@
      (setq nrepl-hide-special-buffers t)
      (setq nrepl-buffer-name-show-port t))
 
-(require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
-(setq ac-use-menu)
-(global-auto-complete-mode t)
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+(req auto-complete
+     (req auto-complete-config)
+     (ac-config-default)
+     (setq ac-use-menu)
+     (global-auto-complete-mode t)
+     (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+     (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+     (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup))
 
 (req ac-nrepl
      (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
