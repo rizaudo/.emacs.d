@@ -354,8 +354,20 @@
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
   (req howm
        (setq howm-menu-lang 'ja))
+  ;; coq
+  (add-to-list 'exec-path "/usr/local/bin/")
+  (add-to-list 'load-path "/usr/local/opt/coq/lib/emacs/site-lisp/")
+  (require 'coq)
   ;; proof general
-  (add-to-list 'load-path "/usr/share/emacs/site-lisp/ProofGeneral"))
+  (load-file "/usr/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
+  (defadvice coq-mode-config (after deactivate-holes-mode () activate)
+    "Deactivate holes-mode when coq-mode is activated."
+    (progn (holes-mode 0))
+  )
+  (add-hook 'proof-mode-hook
+            '(lambda ()
+               (define-key proof-mode-map (kbd "C-c C-j") 'proof-goto-point)))
+  )
 
 ;;; my function
 (when (eq system-type 'darwin)
