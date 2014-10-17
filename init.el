@@ -159,19 +159,17 @@
 
 
 (when (and (eq system-type 'darwin) (not (eq window-system nil)))
-  (set-face-attribute 'default nil :family "Ricty Diminished" :height 150)
+  (set-face-attribute 'default nil :family "Inconsolata" :height 150)
   (set-fontset-font "fontset-default"
                     'japanese-jisx0208
-                    '("Ricty Diminished"))
+                    '("Hiragino Maru Gothic ProN"))
   (set-fontset-font "fontset-default"
                     'katakana-jisx0201
-                    '("Ricty Diminished"))
-  ;; (set-fontset-font "fontset-default"
-  ;;                   'japanese-jisx0208
-  ;;                   '("Hiragino Maru Gothic ProN"))
-  ;; (set-fontset-font "fontset-default"
-  ;;                   'katakana-jisx0201
-  ;;                   '("Hiragino Maru Gothic ProN"))
+                    '("Hiragino Maru Gothic ProN"))
+  ;; japanese-jisx0213.2004-1
+  (set-fontset-font "fontset-default"
+                    'japanese-jisx0213.2004-1
+                    '("Hiragino Maru Gothic ProN"))
   )
 
 ;;; emacs lisp setting
