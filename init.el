@@ -94,6 +94,7 @@
     nrepl
     cider
     ac-nrepl
+    ac-cider
     clojure-cheatsheet
     clojure-snippets
     slamhound
@@ -140,6 +141,7 @@
 
     esup
     htmlize
+    anything
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
@@ -278,17 +280,25 @@
 (req auto-complete
      (req auto-complete-config)
      (ac-config-default)
-     (setq ac-use-menu)
+     (setq ac-use-menu-map t)
      (global-auto-complete-mode t)
-     (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-     (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-     (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup))
+     ;; (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+     ;; (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+     ;; (add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+     )
 
-(req ac-nrepl
-     (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
-     (add-hook 'cider-mode-hook 'ac-nrepl-setup)
+;; (req ac-nrepl
+;;      (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+;;      (add-hook 'cider-mode-hook 'ac-nrepl-setup)
+;;      (eval-after-load "auto-complete"
+;;        '(add-to-list 'ac-modes 'cider-repl-mode)))
+
+(req ac-cider
+     (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
+     (add-hook 'cider-mode-hook 'ac-cider-setup)
+     (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
      (eval-after-load "auto-complete"
-       '(add-to-list 'ac-modes 'cider-repl-mode)))
+       '(add-to-list 'ac-modes 'cider-mode)))
 
 ;; (req yasnippet
 ;;      (yas-global-mode 0))
