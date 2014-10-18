@@ -64,7 +64,7 @@
 ;;; package config
 
 ;;; もっと良いパッケージ管理を使いたい
-;;; need el-get
+;;; need el-get <-これでは救われなそう
 (req package
   (addlist 'package-archives
              ("marmalade" .
