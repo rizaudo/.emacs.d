@@ -274,7 +274,7 @@
 ;;; C-c M-c connect C-c M-j jack-in C-c C-q end
 ;;; switch-to-buffer SPC after hidden buffers visible
 (req cider
-     (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+     ;; (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
      (setq nrepl-hide-special-buffers t)
      (setq nrepl-buffer-name-show-port t))
 
