@@ -368,6 +368,12 @@
   (add-hook 'proof-mode-hook
             '(lambda ()
                (define-key proof-mode-map (kbd "C-c C-j") 'proof-goto-point)))
+  ;; agda
+  (exec-path-from-shell-initialize)
+  (add-to-list 'exec-path "~/Library/Haskell/bin/")
+  (load-file (let ((coding-system-for-read 'utf-8))
+               (shell-command-to-string "agda-mode locate")))
+  
   )
 
 ;;; my function
@@ -450,4 +456,3 @@
  '(rainbow-delimiters-depth-5-face ((t (:foreground "dark blue"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "forest green"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "cyan4")))))
-
