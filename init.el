@@ -139,6 +139,9 @@
     magit
     git-gutter
 
+    ;; shell
+    exec-path-from-shell
+
     esup
     htmlize
     anything
