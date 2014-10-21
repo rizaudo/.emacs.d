@@ -86,6 +86,10 @@
     ;; emacs lisp lib
     deferred
     dash
+
+    ;; CommonLisp
+    slime
+    ac-slime
     
     ;; for Clojure settings
     clojure-mode
@@ -183,6 +187,15 @@
 (req color-theme
      (load-theme 'misterioso t))
 
+;;; common lisp
+(setq inferior-lisp-program "clisp")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
+(req slime
+     (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation)))
+
+(req ac-slime
+     (add-hook 'slime-mode-hook 'set-up-slime-ac)
+     (add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
 
 
 ;;; Git
