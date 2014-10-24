@@ -436,23 +436,23 @@
     (font-lock-mode 1)))
 
 (defvar anything-c-source-font-families
-      '((name . "Fonts")
-        (init lambda ()
-              (unless (anything-candidate-buffer)
-                (save-window-excursion
-                  (anything-font-families-create-buffer))
-                (anything-candidate-buffer
-                 (get-buffer "*Fonts*"))))
-        (candidates-in-buffer)
-        (get-line . buffer-substring)
-        (action
-         ("Copy Name" lambda
-          (candidate)
-          (kill-new candidate))
-         ("Insert Name" lambda
-          (candidate)
-          (with-current-buffer anything-current-buffer
-            (insert candidate))))))
+  '((name . "Fonts")
+    (init lambda ()
+          (unless (anything-candidate-buffer)
+            (save-window-excursion
+              (anything-font-families-create-buffer))
+            (anything-candidate-buffer
+             (get-buffer "*Fonts*"))))
+    (candidates-in-buffer)
+    (get-line . buffer-substring)
+    (action
+     ("Copy Name" lambda
+      (candidate)
+      (kill-new candidate))
+     ("Insert Name" lambda
+      (candidate)
+      (with-current-buffer anything-current-buffer
+        (insert candidate))))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
