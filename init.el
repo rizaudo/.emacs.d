@@ -471,3 +471,14 @@
  '(rainbow-delimiters-depth-5-face ((t (:foreground "dark blue"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "forest green"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "cyan4")))))
+
+(defface extra-ws
+  '((t (:background "blue" :foreground "black" :height 0.8))
+    :group 'hi-lock-faces)
+  "Used in text-mode and friends for exactly one space after a period.")
+
+(font-lock-add-keywords 'agda2-mode
+                        '(("[ℕτΓ]" . 'extra-ws)
+  ;;   ("　" . 'trailing-whitespace)
+  ;; ("[ \t]+$" . 'trailing-whitespace)
+  ))
