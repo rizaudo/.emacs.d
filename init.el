@@ -137,7 +137,8 @@
     multiple-cursors
     org
     org-plus-contrib
-    
+
+    ido-ubiquitous
 
     ;; git
     magit
@@ -186,6 +187,7 @@
 (autoload 'esup "esup"  nil t)
 
 
+(setq ido-everywhere t)
 
 
 ;;; Git
