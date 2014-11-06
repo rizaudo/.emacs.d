@@ -524,3 +524,8 @@
   ;;   ("　" . 'trailing-whitespace)
   ;; ("[ \t]+$" . 'trailing-whitespace)
   ))
+
+(defun help-me-rubikitch-san (package)
+  (interactive "MPackageName:")
+  (eww-browse-url (concat "http://rubikitch.com/tag/package:" package "/")))
+
