@@ -169,6 +169,7 @@
       (package-install package))))
 
 
+;;; font
 (when (and (eq system-type 'darwin) (not (eq window-system nil)))
   (set-face-attribute 'default nil :family "Inconsolata" :height 150)
   (set-fontset-font "fontset-default"
@@ -188,6 +189,7 @@
 
 (autoload 'esup "esup"  nil t)
 
+;;; tips
 
 (setq ido-everywhere t)
 
@@ -210,7 +212,6 @@
 (setq multi-term-program "/bin/zsh")
 
 ;;; eshell setting
-
 (quote (setq eshell-command-aliases-list
              (append
               (list
@@ -511,6 +512,8 @@
  '(rainbow-delimiters-depth-6-face ((t (:foreground "forest green"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "cyan4")))))
 
+
+;;; font-lock Experience
 (defface extra-ws
   '((t (:background "blue" :foreground "black" :height 0.8))
     :group 'hi-lock-faces)
