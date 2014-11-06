@@ -291,6 +291,13 @@
 (req ac-slime
      (add-hook 'slime-mode-hook 'set-up-slime-ac)
      (add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
+
+
+;;; Clojure
+(lazyload (clojure-mode) "clojure-mode"
+          (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+          )
+
 ;;; C-c M-c connect C-c M-j jack-in C-c C-q end
 ;;; switch-to-buffer SPC after hidden buffers visible
 (req cider
