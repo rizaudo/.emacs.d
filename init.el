@@ -188,11 +188,6 @@
 (req color-theme
      (load-theme 'misterioso t))
 
-;;; common lisp
-(setq inferior-lisp-program "clisp")
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
-(req slime
-     (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation)))
 
 
 
@@ -284,6 +279,12 @@
 ;;; programming support
 (req undo-tree
      (global-undo-tree-mode))
+
+;;; common lisp
+(setq inferior-lisp-program "clisp")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
+(req slime
+     (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation)))
 
 (req ac-slime
      (add-hook 'slime-mode-hook 'set-up-slime-ac)
