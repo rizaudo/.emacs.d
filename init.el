@@ -225,7 +225,9 @@
 ;;   'paredit-wrap-round-from-behind)
 
 (req smartparens
-     (req smartparens-config))
+     (req smartparens-config)
+     (add-hook 'clojure-mode 'smartparens-mode)
+     (add-hook 'cider-repl-mode-hook 'smartparens-mode))
 
 
 (line-number-mode t)
