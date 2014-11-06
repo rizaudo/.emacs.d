@@ -185,9 +185,6 @@
 
 (autoload 'esup "esup"  nil t)
 
-(req color-theme
-     (load-theme 'misterioso t))
-
 
 
 
@@ -248,6 +245,9 @@
 
 ;; (req tabbar
 ;;      (tabbar-mode 1))
+
+(req color-theme
+     (load-theme 'misterioso t))
 
 (req powerline
      (powerline-center-theme))
