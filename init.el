@@ -147,6 +147,7 @@
     ;; shell
     exec-path-from-shell
 
+    diminish
     powerline
     esup
     htmlize
@@ -189,6 +190,13 @@
 
 (setq ido-everywhere t)
 
+(req diminish
+     ;; (diminish 'undo-tree-mode)
+     ;; (diminish 'git-gutter-mode "GG")
+     ;; (diminish 'eldoc-mode "doc")
+     ;; (diminish 'paredit-mode "PE")
+     ;; (diminish 'elisp-slime-nav-mode "SN")
+     )
 
 ;;; Git
 (lazyload (git-gutter) "git-gutter"
