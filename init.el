@@ -294,7 +294,15 @@
 (req auto-complete
      (req auto-complete-config)
      (ac-config-default)
+     (setq ac-auto-show-menu 0.6)        ;タイマーに使われている
+     (setq ac-dwim t)
      (setq ac-use-menu-map t)
+     (setq ac-quick-help-delay 1)
+     (setq ac-quick-help-height 60)
+     (setq ac-disable-inline t)
+     (setq ac-show-menu-immediately-on-auto-complete t)
+     (setq ac-auto-start 2)
+     (setq ac-candidate-menu-min 0)
      (global-auto-complete-mode t)
      ;; (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
      ;; (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
