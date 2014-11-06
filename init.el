@@ -146,6 +146,7 @@
     ;; shell
     exec-path-from-shell
 
+    powerline
     esup
     htmlize
     anything
@@ -252,6 +253,9 @@
 
 ;; (req tabbar
 ;;      (tabbar-mode 1))
+
+(req powerline
+     (powerline-center-theme))
 
 ;;; (set-background-color "Black")
 ;;; (set-foreground-color "White")
