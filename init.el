@@ -86,6 +86,7 @@
     ;; emacs lisp lib
     deferred
     dash
+    ;; elisp-slime-nav
 
     ;; CommonLisp
     slime
@@ -95,9 +96,7 @@
     clojure-mode
     clojure-project-mode
     clojurescript-mode
-    nrepl
     cider
-    ac-nrepl
     ac-cider
     clojure-cheatsheet
     clojure-snippets
@@ -147,6 +146,8 @@
     ;; shell
     exec-path-from-shell
 
+    quickrun
+    ssh-config-mode
     diminish
     powerline
     esup
