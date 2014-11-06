@@ -305,6 +305,12 @@
      (setq nrepl-hide-special-buffers t)
      (setq nrepl-buffer-name-show-port t))
 
+(req clj-refactor
+     (add-hook 'clojure-mode-hook (lambda ()
+                                    (clj-refactor-mode 1)
+                                    ;; insert keybinding setup here
+                                    )))
+
 (req auto-complete
      (req auto-complete-config)
      (ac-config-default)
