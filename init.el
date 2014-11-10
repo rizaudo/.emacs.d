@@ -193,6 +193,9 @@
 
 (setq ido-everywhere t)
 
+;;; eldoc in M-:
+(add-hook 'eval-expression-minibuffer-setup-hook 'eldoc-mode)
+
 (req diminish
      ;; (diminish 'undo-tree-mode)
      ;; (diminish 'git-gutter-mode "GG")
