@@ -529,6 +529,6 @@
   ))
 
 (defun help-me-rubikitch-san (package)
-  (interactive "MPackageName:")
+  (interactive "sPackageName:")
   (eww-browse-url (concat "http://rubikitch.com/tag/package:" package "/")))
 
