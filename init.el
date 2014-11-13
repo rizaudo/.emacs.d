@@ -260,9 +260,6 @@
 
 ;;; ウインドウの外見設定
 
-;; (req tabbar
-;;      (tabbar-mode 1))
-
 (req color-theme
      (load-theme 'misterioso t))
 
