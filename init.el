@@ -298,7 +298,9 @@
 (setq inferior-lisp-program "clisp")
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
 (req slime
-     (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation)))
+     (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation))
+     (setq slime-contribs '(slime-fancy)) ; ALL IN!
+     )
 
 (req ac-slime
      (add-hook 'slime-mode-hook 'set-up-slime-ac)
