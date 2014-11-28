@@ -43,12 +43,17 @@
        (unless (server-running-p)
          (server-start))))
 
-;;; 詳細設定
+;;; 詳細設定 <- not req package
+
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+  (when (fboundp mode) (funcall mode -1)))
 
 (setq gc-cons-threshold (* 50 gc-cons-threshold))
 
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
+
+(blink-cursor-mode 0)
 
 ;;;変更された時に自動でバッファ読み直し
 (global-auto-revert-mode 1)
