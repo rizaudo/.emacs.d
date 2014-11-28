@@ -260,7 +260,8 @@
      (req smartparens-config)
      (add-hook 'clojure-mode 'smartparens-mode)
      (add-hook 'cider-repl-mode-hook 'smartparens-mode)
-     (define-key paredit-mode-map (kbd "C-j") nil))
+;; (define-key paredit-mode-map (kbd "C-j") nil)
+)
 
 
 (line-number-mode t)
