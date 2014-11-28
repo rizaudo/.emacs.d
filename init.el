@@ -206,6 +206,9 @@
       ido-handle-duplicate-virtual-buffers 2
       ido-max-prospects 10)
 (setq ido-everywhere t)
+(req smex
+     (smex-initialize)
+     (global-set-key (kbd "M-x") 'smex))
 
 ;;; eldoc in M-:
 (add-hook 'eval-expression-minibuffer-setup-hook 'eldoc-mode)
