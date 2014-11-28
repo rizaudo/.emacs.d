@@ -1,5 +1,5 @@
 ;;;; emacs-setup Sat Nov  9 12:29:18 2013
-;;;; for emacs 24.3(now)
+;;;; for emacs 24.4(now)
 ;;;; 基本的に例外が無い限り最新版を追うこととします
 ;;;; 想定環境 Linux(Debian) Mac Windows
 ;;;; 外部に投げる場合や環境依存の物を使う場合、system-typeを見てunless
