@@ -91,7 +91,7 @@
     ;; emacs lisp lib
     deferred
     dash
-    ;; elisp-slime-nav
+    elisp-slime-nav
 
     ;; CommonLisp
     slime
@@ -141,8 +141,13 @@
     multiple-cursors
     org
     org-plus-contrib
+    org-jekyll
 
     ido-ubiquitous
+    smex
+    idle-highlight-mode
+    find-file-in-project
+    scpaste
 
     ;; git
     magit
@@ -158,6 +163,7 @@
     esup
     htmlize
     anything
+    command-log-mode
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
