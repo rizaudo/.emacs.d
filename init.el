@@ -141,7 +141,7 @@
     multiple-cursors
     org
     org-plus-contrib
-    org-jekyll
+    org-octopress
 
     ido-ubiquitous
     smex
@@ -413,6 +413,22 @@
 ;;; Org-mode
 (req ox-latex
      (req ox-bibtex)
+     (req ox-publish)
+     (req ox-jekyll)
+     (setq org-publish-project-alist
+      '(
+        ("emacs-customize-101-jp"
+         ;; Path to your org files.
+         :base-directory "~/project/emacs-customize-101-jp/org/"
+         :base-extension "org"
+         ;; Path to your Jekyll project.
+         :publishing-directory "~/project/emacs-customize-101-jp/_posts/"
+         :recursive t
+         :publishing-function org-jekyll-publish-to-html
+         :headline-levels 4
+         :html-extension "html"
+         ;; :body-only t ;; Only export section between <body> </body>
+         )))
      (setq org-latex-pdf-process
            '("latexmk %f"))
      (setq org-latex-with-hyperref nil)
