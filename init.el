@@ -432,6 +432,33 @@
      (setq org-latex-pdf-process
            '("latexmk %f"))
      (setq org-latex-with-hyperref nil)
+     (setq org-latex-listings 'listings)
+     (add-to-list 'org-latex-packages-alist '("" "listings"))
+     (add-to-list 'org-latex-packages-alist '("" "color"))
+     (custom-set-variables
+      '(org-latex-listings-langs
+        (quote
+         ((emacs-lisp "Lisp")
+          (lisp "Lisp")
+          (clojure "Lisp")
+          (c "C")
+          (cc "C++")
+          (fortran "fortran")
+          (perl "Perl")
+          (cperl "Perl")
+          (python "Python")
+          (ruby "Ruby")
+          (html "HTML")
+          (xml "XML")
+          (tex "TeX")
+          (latex "[LaTeX]TeX")
+          (shell-script "bash")
+          (gnuplot "Gnuplot")
+          (ocaml "Caml")
+          (caml "Caml")
+          (sql "SQL")
+          (sqlite "sql")
+          (shell "bash")))))
      (add-to-list 'org-latex-classes
              '("thesis"
                "\\documentclass[a4j]{jarticle}
