@@ -435,7 +435,7 @@
      (add-to-list 'org-latex-classes
              '("thesis"
                "\\documentclass[a4j]{jarticle}
-                [NO-PACKAGES]
+                [PACKAGES]
                 [NO-DEFAULT-PACKAGES]
                 \\usepackage[dvipdfmx]{graphicx}"
                ("\\section{%s}" . "\\section*{%s}")
