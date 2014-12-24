@@ -322,9 +322,9 @@
      (global-undo-tree-mode))
 
 ;;; common lisp
-(setq inferior-lisp-program "clisp")
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
 (req slime
+     (setq inferior-lisp-program "clisp")
      (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation))
      (setq slime-contribs '(slime-fancy)) ; ALL IN!
      )
