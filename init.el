@@ -56,6 +56,7 @@
 (blink-cursor-mode 0)
 
 ;;;変更された時に自動でバッファ読み直し
+(require 'autorevert)
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
 
