@@ -27,7 +27,7 @@
 
 ;;; need fix
 (defmacro addlist (target &rest body)
-  `(mapcar '(lambda (x) (add-to-list ,target x)) ',body))
+  `(mapc '(lambda (x) (add-to-list ,target x)) ',body))
 
 ;;; (lazyload (triger-function　...) "filename" &rest body)
 (defmacro lazyload (func lib &rest body)
