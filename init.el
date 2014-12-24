@@ -203,7 +203,8 @@
 
 ;;; tips
 (req ido)
-(ido-ubiquitous-mode)
+(req ido-ubiquitous)
+(ido-ubiquitous-mode 1)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-auto-merge-work-directories-length nil
