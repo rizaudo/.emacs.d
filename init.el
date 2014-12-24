@@ -236,8 +236,8 @@
 
 ;;; terminal
 ;;; multi-tarm setting
-(autoload 'multi-term  "multi-term" nil t)
-(setq multi-term-program "/bin/zsh")
+(lazyload (multi-term) "multi-term"
+          (setq multi-term-program "/bin/zsh"))
 
 ;;; eshell setting
 (quote (setq eshell-command-aliases-list
