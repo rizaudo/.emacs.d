@@ -11,7 +11,7 @@
 ;;; to autoload: git-gutter,cider,yasnippet,
 
 (set-language-environment 'Japanese)
-(setq default-major-mode 'text-mode)
+(setq major-mode 'text-mode)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
