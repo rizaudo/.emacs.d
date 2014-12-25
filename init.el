@@ -7,9 +7,8 @@
 ;;;; のほうが可読性良いかもしれない。
 ;;;; 使っているシステムの情報
 ;;;; mac:darwin windows:windows-nt
-;;; TODO
-;;; to autoload: git-gutter,cider,yasnippet,
 
+;;; Code:
 (set-language-environment 'Japanese)
 (setq major-mode 'text-mode)
 (set-keyboard-coding-system 'utf-8)
@@ -270,8 +269,6 @@
      (add-hook 'cider-repl-mode-hook 'smartparens-mode)
 ;; (define-key paredit-mode-map (kbd "C-j") nil)
 )
-
-
 (line-number-mode t)
 (column-number-mode t)
 
@@ -600,9 +597,12 @@
                         '(("[ℕτΓ]" . 'extra-ws)
   ;;   ("　" . 'trailing-whitespace)
   ;; ("[ \t]+$" . 'trailing-whitespace)
-  ))
+                          ))
 
 (defun help-me-rubikitch-san (package)
   (interactive "sPackageName:")
   (eww-browse-url (concat "http://rubikitch.com/tag/package:" package "/")))
 
+
+(provide 'init)
+;;; init.el ends here
