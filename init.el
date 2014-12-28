@@ -93,11 +93,6 @@
 ;;; #PACLIST#
 (defvar my/favorite-packages
   '(
-    starter-kit
-    starter-kit-lisp
-    starter-kit-bindings
-    starter-kit-eshell
-
     ;; emacs lisp lib
     deferred
     dash
