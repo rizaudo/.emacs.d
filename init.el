@@ -213,6 +213,7 @@
 (autoload 'esup "esup"  nil t)
 
 ;;; tips
+(req uniquify)
 (req ido)
 (req ido-ubiquitous)
 (ido-ubiquitous-mode 1)
