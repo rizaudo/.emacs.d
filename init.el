@@ -303,9 +303,7 @@
 (req powerline
      (powerline-center-theme))
 
-;;; (set-background-color "Black")
-;;; (set-foreground-color "White")
-;;; (set-cursor-color "White")
+(set-frame-parameter nil 'fullscreen 'maximized)
 (set-frame-parameter nil 'alpha 85)
 (set-cursor-color "Blue")
 
