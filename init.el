@@ -525,6 +525,24 @@
 (global-set-key "\M-p" 'scroll-down-command)
 (global-set-key "\M-n" 'scroll-up-command)
 
+;; Font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "\C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "M-%") 'query-replace-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+(global-set-key (kbd "C-M-%") 'query-replace)
+
+(global-set-key (kbd "C-x C-i") 'imenu)
+
+(windmove-default-keybindings) ;; Shift+direction
+(global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2)))
+
+(define-key 'help-command "a" 'apropos)
+(global-set-key (kbd "C-c g") 'magit-status)
 
 ;;; play-sound周りはわけ分からん
 ;;; どうも同期的な関数っぽいので使えないっぽい
