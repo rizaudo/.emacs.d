@@ -230,6 +230,9 @@
      (smex-initialize)
      (global-set-key (kbd "M-x") 'smex))
 
+(req saveplace
+     (setq save-place t))
+
 ;;; eldoc in M-:
 (add-hook 'eval-expression-minibuffer-setup-hook 'eldoc-mode)
 
