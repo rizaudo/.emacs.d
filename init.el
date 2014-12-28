@@ -138,6 +138,7 @@
     ac-c-headers
     ac-cider-compliment
     ac-helm
+    ac-dabbrev
     
     flycheck
     ;; helm packages
@@ -158,6 +159,8 @@
     idle-highlight-mode
     find-file-in-project
     scpaste
+    direx
+    popwin
 
     ;; git
     magit
