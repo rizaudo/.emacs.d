@@ -51,6 +51,16 @@
 
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
+(setq inhibit-startup-message t
+      color-theme-is-global t)
+(defalias 'yes-or-no-p 'y-or-n-p)
+(defalias 'auto-tail-revert-mode 'tail-mode)
+
+(random t)
+
+(eval-after-load 'grep
+  '(when (boundp 'grep-find-ignored-files)
+     (add-to-list 'grep-find-ignored-files "*.class")))
 
 (blink-cursor-mode 0)
 
