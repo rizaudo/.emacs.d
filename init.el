@@ -583,7 +583,30 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(eww-search-prefix "https://google.com/?q="))
+ '(eww-search-prefix "https://google.com/?q=")
+ '(org-latex-listings-langs
+   (quote
+    ((emacs-lisp "Lisp")
+     (lisp "Lisp")
+     (clojure "Lisp")
+     (c "C")
+     (cc "C++")
+     (fortran "fortran")
+     (perl "Perl")
+     (cperl "Perl")
+     (python "Python")
+     (ruby "Ruby")
+     (html "HTML")
+     (xml "XML")
+     (tex "TeX")
+     (latex "[LaTeX]TeX")
+     (shell-script "bash")
+     (gnuplot "Gnuplot")
+     (ocaml "Caml")
+     (caml "Caml")
+     (sql "SQL")
+     (sqlite "sql")
+     (shell "bash")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
