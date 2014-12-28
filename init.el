@@ -285,6 +285,7 @@
 (column-number-mode t)
 
 ;;; time setting
+(require 'time)
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time)
