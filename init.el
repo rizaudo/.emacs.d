@@ -540,7 +540,7 @@
 (setq debug-on-error t
       debug-on-signal nil)
 
-(require 'cl)  ; loop, delete-duplicates
+;; loop, delete-duplicates
 
 (defun anything-font-families ()
   "Preconfigured `anything' for font family."
