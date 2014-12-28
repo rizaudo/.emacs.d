@@ -272,7 +272,10 @@
 ;; (req paredit
 ;;      (add-hook 'clojure-mode 'paredit-mode)
 ;;      ;; (add-hook 'nrepl-mode-hook 'paredit-mode)
-;;      (add-hook 'cider-repl-mode-hook 'paredit-mode))
+;;      (add-hook 'cider-repl-mode-hook 'paredit-mode)
+;;      (define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp)
+;;      (define-key paredit-mode-map (kbd "M-(") 'paredit-backward-slurp-sexp))
+
 
 ;; (defun paredit-wrap-round-from-behind ()
 ;;   (interactive)
