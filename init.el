@@ -207,6 +207,8 @@
 
 ;;; emacs lisp setting
 ;;; M-. 定義元へ M-, 元居た位置へ C-c C-d C-d カーソル下のドキュメント表示
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook 'elisp-slime-nav-mode)
 
 (autoload 'esup "esup"  nil t)
 
