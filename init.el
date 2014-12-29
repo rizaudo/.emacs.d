@@ -77,7 +77,7 @@
 
 
 ;;; package config
-
+;;; TODO:バージョンごとのパッケージ管理
 ;;; もっと良いパッケージ管理を使いたい
 ;;; need el-get <-これでは救われなそう
 (req package
