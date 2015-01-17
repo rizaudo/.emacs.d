@@ -56,6 +56,10 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'auto-tail-revert-mode 'tail-mode)
 
+(setq read-file-name-completion-ignore-case t)
+;;; C-kで行全体を削除
+(setq kill-whole-line t)
+
 (random t)
 
 (eval-after-load 'grep
@@ -296,11 +300,6 @@
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time)
-
-(setq read-file-name-completion-ignore-case t)
-
-;;; C-kで行全体を削除
-(setq kill-whole-line t)
 
 ;;; ウインドウの外見設定
 
