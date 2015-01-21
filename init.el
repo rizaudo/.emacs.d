@@ -74,7 +74,8 @@
 (setq global-auto-revert-non-file-buffers t)
 
 ;;; auto-saveファイルを削除する
-(setq delete-auto-save-file t)
+(require 'files)
+;; (setq delete-auto-save-files t)
 
 ;;;parenthesis
 (show-paren-mode t)
