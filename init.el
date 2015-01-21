@@ -128,6 +128,7 @@
 
     color-theme
     color-theme-molokai
+    tron-theme
 
     lua-mode
     project-mode
@@ -304,8 +305,8 @@
 
 ;;; ウインドウの外見設定
 
-(req color-theme
-     (load-theme 'misterioso t))
+(require 'tron-theme)
+;; (load-theme 'tron t)
 
 (req powerline
      (powerline-center-theme))
