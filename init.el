@@ -177,6 +177,10 @@
     htmlize
     anything
     command-log-mode
+    use-package
+    e2wm
+    calfw
+    apropos-fn+var
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
