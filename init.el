@@ -171,7 +171,6 @@
     exec-path-from-shell
 
     quickrun
-    ssh-config-mode
     diminish
     powerline
     esup
