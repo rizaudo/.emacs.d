@@ -376,7 +376,7 @@
 (req auto-complete
      (req auto-complete-config)
      (ac-config-default)
-     (setq ac-auto-show-menu 0.6)        ;タイマーに使われている
+     (setq ac-auto-show-menu t)        ;タイマーに使われている
      (setq ac-dwim t)
      (setq ac-use-menu-map t)
      (setq ac-quick-help-delay 1)
