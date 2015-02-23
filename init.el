@@ -245,6 +245,9 @@
 (req saveplace
      (setq save-place t))
 
+(require 'woman)
+(setq woman-use-own-frame nil)
+
 (req guide-key
      (setq guide-key/guide-key-sequence '("C-h" "C-x 4"))
      (setq guide-key/highlight-command-regexp "rectangle")
