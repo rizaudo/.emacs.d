@@ -163,6 +163,7 @@
     scpaste
     direx
     popwin
+    guide-key
 
     ;; git
     magit
@@ -243,6 +244,16 @@
 
 (req saveplace
      (setq save-place t))
+
+(req guide-key
+     (setq guide-key/guide-key-sequence '("C-h" "C-x 4"))
+     (setq guide-key/highlight-command-regexp "rectangle")
+     (defun guide-key/my-hook-function-for-org-mode ()
+       (guide-key/add-local-guide-key-sequence "C-c")
+       (guide-key/add-local-guide-key-sequence "C-c C-x")
+       (guide-key/add-local-highlight-command-regexp "org-"))
+     (add-hook 'org-mode-hook 'guide-key/my-hook-function-for-org-mode)
+     (guide-key-mode 1))
 
 ;;; eldoc in M-:
 (add-hook 'eval-expression-minibuffer-setup-hook 'eldoc-mode)
