@@ -156,6 +156,7 @@
     org-octopress
 
     ido-ubiquitous
+    ido-vertical-mode
     smex
     idle-highlight-mode
     find-file-in-project
@@ -225,6 +226,7 @@
 (req ido)
 (req ido-ubiquitous)
 (ido-ubiquitous-mode 1)
+(ido-vertical-mode 1)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-auto-merge-work-directories-length nil
