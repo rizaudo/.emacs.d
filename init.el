@@ -154,6 +154,7 @@
     org
     org-plus-contrib
     org-octopress
+    yatex
 
     ido-ubiquitous
     ido-vertical-mode
@@ -507,6 +508,10 @@
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
+;; TeX
+(setq auto-mode-alist
+      (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
+(autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
 
 ;;; src package setting
 (when (eq system-type 'darwin)
@@ -514,11 +519,11 @@
   (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
   (req howm
        (setq howm-menu-lang 'ja))
-  ;; YaTeX
-  (setq load-path (cons (expand-file-name "~/.emacs.d/yatex1.77/") load-path))
-  (setq auto-mode-alist
-        (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
-  (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
+  ;; ;; YaTeX
+  ;; (setq load-path (cons (expand-file-name "~/.emacs.d/yatex1.77/") load-path))
+  ;; (setq auto-mode-alist
+  ;;       (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
+  ;; (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
   ;; coq
   (add-to-list 'exec-path "/usr/local/bin/")
   (add-to-list 'load-path "/usr/local/opt/coq/lib/emacs/site-lisp/")
