@@ -382,7 +382,7 @@
      (setq nrepl-hide-special-buffers t)
      (setq nrepl-buffer-name-show-port t))
 
-(req clj-refactor
+(lazyload (clj-refactor-mode) "clj-refactor"
      (add-hook 'clojure-mode-hook (lambda ()
                                     (clj-refactor-mode 1)
                                     ;; insert keybinding setup here
