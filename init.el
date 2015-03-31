@@ -517,7 +517,7 @@
 ;;; src package setting
 (when (eq system-type 'darwin)
   ;; howm
-  (add-to-list 'load-path "/usr/share/emacs/site-lisp/howm/")
+  (add-to-list 'load-path "~/.emacs.d/howm-1.4.2/")
   (req howm
        (setq howm-menu-lang 'ja))
   ;; ;; YaTeX
