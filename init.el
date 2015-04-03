@@ -151,6 +151,8 @@
     helm-ag
     helm-ls-git
     helm-descbinds
+    helm-R
+    helm-itunes
     ;; term
     multi-term
 
@@ -273,6 +275,13 @@
      ;; (diminish 'paredit-mode "PE")
      ;; (diminish 'elisp-slime-nav-mode "SN")
      )
+
+;; Helm 使わないけど一応
+(req helm
+     (req helm-R)
+     (req helm-ls-git)
+     (req helm-descbinds)
+     (req helm-itunes))
 
 ;;; Git
 (lazyload (git-gutter) "git-gutter"
