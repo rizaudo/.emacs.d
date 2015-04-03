@@ -374,7 +374,7 @@
 ;;; common lisp
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
 (req slime
-     (setq inferior-lisp-program "clisp")
+     (setq inferior-lisp-program "sbcl")
      (slime-setup '(slime-repl slime-fancy slime-banner slime-indentation))
      (setq slime-contribs '(slime-fancy)) ; ALL IN!
      )
