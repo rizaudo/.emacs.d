@@ -252,6 +252,10 @@
      (smex-initialize)
      (global-set-key (kbd "M-x") 'smex))
 
+(req popwin
+     (setq display-buffer-function 'popwin:display-buffer)
+     (setq popwin:popup-window-position 'bottom))
+
 (req saveplace
      (setq save-place t))
 
