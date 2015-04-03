@@ -247,7 +247,8 @@
       ido-use-virtual-buffers t
       ido-handle-duplicate-virtual-buffers 2
       ido-max-prospects 10)
-(setq ido-everywhere t)
+(setq ido-everywhere t
+      ido-max-window-height 0.75)
 (req smex
      (setq smex-save-file (concat user-emacs-directory ".smex-items"))
      (smex-initialize)
