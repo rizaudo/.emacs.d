@@ -653,40 +653,13 @@
       (candidate)
       (with-current-buffer anything-current-buffer
         (insert candidate))))))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(eww-search-prefix "https://google.com/?q=")
- '(org-latex-listings-langs
-   (quote
-    ((emacs-lisp "Lisp")
-     (lisp "Lisp")
-     (clojure "Lisp")
-     (c "C")
-     (cc "C++")
-     (fortran "fortran")
-     (perl "Perl")
-     (cperl "Perl")
-     (python "Python")
-     (ruby "Ruby")
-     (html "HTML")
-     (xml "XML")
-     (tex "TeX")
-     (latex "[LaTeX]TeX")
-     (shell-script "bash")
-     (gnuplot "Gnuplot")
-     (ocaml "Caml")
-     (caml "Caml")
-     (sql "SQL")
-     (sqlite "sql")
-     (shell "bash")))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#15abc3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 200 :width normal :foundry "nil" :family "Inconsolata"))))
  '(rainbow-delimiters-depth-1-face ((t (:background "blue3" :foreground "White" :inverse-video t :strike-through t :overline t :weight bold))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "chartreuse3"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "alice blue"))))
