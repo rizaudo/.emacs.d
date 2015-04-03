@@ -117,6 +117,8 @@
     clojure-snippets
     slamhound
     typed-clojure-mode
+    flycheck-clojure
+    latest-clojure-libraries
 
     ;; OCaml setting
     tuareg
