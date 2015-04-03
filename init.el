@@ -128,9 +128,11 @@
     paredit
     smartparens
 
+    ;; Color-Theme
     color-theme
     color-theme-molokai
     tron-theme
+    org-beautify-theme
 
     lua-mode
     project-mode
