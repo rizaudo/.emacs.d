@@ -193,6 +193,7 @@
     e2wm
     calfw
     apropos-fn+var
+    emms
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
@@ -373,6 +374,11 @@
        (set-face-foreground 'whitespace-space "#7cfc00")
        (set-face-background 'whitespace-space 'nil)
        (set-face-bold 'whitespace-space t)))
+(req emms
+         (require 'emms-setup)
+         (emms-standard)
+         (emms-default-players)
+         (setq emms-player-list '(emms-player-mplayer)))
 
 ;;; programming support
 (req undo-tree
