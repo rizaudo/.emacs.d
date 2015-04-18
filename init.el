@@ -195,6 +195,8 @@
     calfw
     apropos-fn+var
     emms
+    emms-player-mpv
+    emms-soundcloud
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
