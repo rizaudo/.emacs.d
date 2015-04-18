@@ -159,6 +159,7 @@
     ;; term
     multi-term
 
+    markdown-mode
     multiple-cursors
     org
     org-plus-contrib
