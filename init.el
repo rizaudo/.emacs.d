@@ -483,50 +483,40 @@
 (req ox-publish)
 (req ox-jekyll
      (setq org-publish-project-alist
-      '(
-        ("emacs-customize-101-jp"
-         ;; Path to your org files.
-         :base-directory "~/project/emacs-customize-101-jp/org/"
-         :base-extension "org"
-         ;; Path to your Jekyll project.
-         :publishing-directory "~/project/emacs-customize-101-jp/_posts/"
-         :recursive t
-         :publishing-function org-jekyll-publish-to-html
-         :headline-levels 4
-         :html-extension "html"
-         ;; :body-only t ;; Only export section between <body> </body>
-         )))
-     (setq org-latex-pdf-process
-           '("latexmk %f"))
-     (setq org-latex-with-hyperref nil)
-     (setq org-latex-listings 'listings)
-     (add-to-list 'org-latex-packages-alist '("" "listings"))
-     (add-to-list 'org-latex-packages-alist '("" "color"))
-     (custom-set-variables
-      '(org-latex-listings-langs
-        (quote
-         ((emacs-lisp "Lisp")
-          (lisp "Lisp")
-          (clojure "Lisp")
-          (c "C")
-          (cc "C++")
-          (fortran "fortran")
-          (perl "Perl")
-          (cperl "Perl")
-          (python "Python")
-          (ruby "Ruby")
-          (html "HTML")
-          (xml "XML")
-          (tex "TeX")
-          (latex "[LaTeX]TeX")
-          (shell-script "bash")
-          (gnuplot "Gnuplot")
-          (ocaml "Caml")
-          (caml "Caml")
-          (sql "SQL")
-          (sqlite "sql")
-          (shell "bash")))))
-     (add-to-list 'org-latex-classes
+           '(
+             ("emacs-customize-101-jp"
+              ;; Path to your org files.
+              :base-directory "~/project/emacs-customize-101-jp/org/"
+              :base-extension "org"
+              ;; Path to your Jekyll project.
+              :publishing-directory "~/project/emacs-customize-101-jp/_posts/"
+              :recursive t
+              :publishing-function org-jekyll-publish-to-html
+              :headline-levels 4
+              :html-extension "html"
+              ;; :body-only t ;; Only export section between <body> </body>
+              ))))
+
+(setq org-latex-pdf-process
+      '("latexmk %f"))
+(setq org-latex-with-hyperref nil)
+(setq org-latex-listings 'listings)
+(setq org-latex-listings-options
+      '(("basicstyle" "\\footnotesize\\tt")
+        ("keywordstyle" "\\footnotesize\\bf")
+        ("breaklines" "true")
+        ("framerule" "0pt")
+        ("frame" "single")
+        ("showstringspaces" "false")
+        ("xleftmargin" "12pt")
+        ("xrightmargin" "12pt")
+        ("tabsize" "2")
+        ("backgroundcolor" "{\\color[gray]{.93}}")
+        ("basewidth" "{0.57em, 0.52em}")))
+(add-to-list 'org-latex-packages-alist '("" "listings"))
+(add-to-list 'org-latex-packages-alist '("" "color"))
+
+(add-to-list 'org-latex-classes
              '("thesis"
                "\\documentclass[a4j]{jarticle}
                 [PACKAGES]
