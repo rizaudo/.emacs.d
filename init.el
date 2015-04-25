@@ -1,10 +1,7 @@
-;;;; emacs-setup Sat Nov  9 12:29:18 2013
+;;;; emacs-setup
 ;;;; for emacs 24.4(now)
 ;;;; 基本的に例外が無い限り最新版を追うこととします
 ;;;; 想定環境 Linux(Debian) Mac Windows
-;;;; 外部に投げる場合や環境依存の物を使う場合、system-typeを見てunless
-;;;; かwhenしましょう。 unlessよりは(when (not (eq system-type 'hoge)))
-;;;; のほうが可読性良いかもしれない。
 ;;;; 使っているシステムの情報
 ;;;; mac:darwin windows:windows-nt
 
