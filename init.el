@@ -134,7 +134,6 @@
     org-beautify-theme
 
     lua-mode
-    project-mode
     rainbow-mode
     undo-tree
     yasnippet
