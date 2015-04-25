@@ -563,7 +563,9 @@
   (load-file (let ((coding-system-for-read 'utf-8))
                (shell-command-to-string "agda-mode locate")))
   (setq agda2-include-dirs
-        (list "." (expand-file-name "~/AgdaLibrary/"))))
+        (list "." (expand-file-name "~/AgdaLibrary/")))
+  (add-to-list 'load-path "~/.emacs.d/site-lisp")
+  )
 
 ;;; my function
 (when (eq system-type 'darwin)
