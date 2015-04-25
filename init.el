@@ -295,6 +295,10 @@
      (global-git-gutter-mode t)
      (setq git-gutter:update-hooks '(after-save-hook after-revert-hook)))
 
+(eval-after-load 'magit
+  '(progn (setq magit-completing-read-function 'magit-ido-completing-read)
+          (setq magit-auto-revert-mode nil)))
+
 ;;; terminal
 ;;; multi-tarm setting
 (lazyload (multi-term) "multi-term"
