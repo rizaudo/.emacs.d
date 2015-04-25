@@ -192,6 +192,7 @@
     emms
     emms-player-mpv
     emms-soundcloud
+    olivetti
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
