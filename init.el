@@ -480,7 +480,6 @@
 ;;; Org-mode
 (require 'org)
 (req ox-latex)
-;;; (req ox-bibtex)
 (req ox-publish)
 (req ox-jekyll
      (setq org-publish-project-alist
