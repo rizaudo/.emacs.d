@@ -106,7 +106,6 @@
     
     ;; for Clojure settings
     clojure-mode
-    clojure-project-mode
     clojurescript-mode
     cider
     ac-cider
