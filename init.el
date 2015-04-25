@@ -478,10 +478,11 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;;; Org-mode
-(req ox-latex
-     (req ox-bibtex)
-     (req ox-publish)
-     (req ox-jekyll)
+(require 'org)
+(req ox-latex)
+;;; (req ox-bibtex)
+(req ox-publish)
+(req ox-jekyll
      (setq org-publish-project-alist
       '(
         ("emacs-customize-101-jp"
