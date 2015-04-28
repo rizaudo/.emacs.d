@@ -48,8 +48,8 @@
 
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
-(setq inhibit-startup-message t
-      color-theme-is-global t)
+(setq inhibit-startup-message t)
+      ;; color-theme-is-global t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'auto-tail-revert-mode 'tail-mode)
 
