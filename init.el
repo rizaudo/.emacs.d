@@ -189,6 +189,7 @@
     e2wm
     calfw
     apropos-fn+var
+    elfeed
     emms
     emms-player-mpv
     emms-soundcloud
