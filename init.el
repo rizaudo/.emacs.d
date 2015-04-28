@@ -655,7 +655,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#15abc3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 200 :width normal :foundry "nil" :family "Inconsolata"))))
  '(rainbow-delimiters-depth-1-face ((t (:background "blue3" :foreground "White" :inverse-video t :strike-through t :overline t :weight bold))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "chartreuse3"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "alice blue"))))
