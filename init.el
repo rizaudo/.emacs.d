@@ -607,7 +607,6 @@
 ;;; (add-hook 'after-save-hook '(lambda  (play-sound-file "~/.emacs.d/wav/SAMUEAI.wav")))
 ;;; (copy-file "~/.emacs.d/init.el" "~/emacs-setup/init.el" t)
 
-(setenv "TMPDIR" ".")
 (setq temporary-file-directory "/Users/keihosoya/tmp")
 (setq debug-on-error t
       debug-on-signal nil)
