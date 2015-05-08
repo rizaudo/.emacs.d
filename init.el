@@ -354,7 +354,7 @@
 
 ;;; ウインドウの外見設定
 
-(require 'tron-theme)
+;; (require 'tron-theme)
 ;; (load-theme 'tron t)
 
 (req powerline
