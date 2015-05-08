@@ -170,6 +170,8 @@
     direx
     popwin
     guide-key
+    ;; project
+    projectile
 
     ;; git
     magit
