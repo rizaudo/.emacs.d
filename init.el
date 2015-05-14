@@ -139,7 +139,6 @@
     yasnippet
     auto-complete
     ac-c-headers
-    ac-cider-compliment
     ac-helm
     ac-dabbrev
     
