@@ -236,7 +236,7 @@
 
 ;;; tips
 (req uniquify
-     (setq uniquify-buffer-name-style'post-forward-angle-brackets))
+     (setq uniquify-buffer-name-style 'post-forward-angle-brackets))
 (req ido)
 (req ido-ubiquitous)
 (ido-ubiquitous-mode 1)
