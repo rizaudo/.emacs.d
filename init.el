@@ -338,6 +338,7 @@
 
 (req smartparens
      (req smartparens-config)
+     (sp-use-smartparens-bindings)
      (add-hook 'clojure-mode-hook 'smartparens-mode)
      (add-hook 'cider-repl-mode-hook 'smartparens-mode)
      (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
