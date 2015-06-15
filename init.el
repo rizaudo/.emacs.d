@@ -49,7 +49,6 @@
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 (setq inhibit-startup-message t)
-      ;; color-theme-is-global t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'auto-tail-revert-mode 'tail-mode)
 
@@ -341,9 +340,8 @@
      (sp-use-smartparens-bindings)
      (add-hook 'clojure-mode-hook 'smartparens-mode)
      (add-hook 'cider-repl-mode-hook 'smartparens-mode)
-     (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-;; (define-key paredit-mode-map (kbd "C-j") nil)
-)
+     (add-hook 'emacs-lisp-mode-hook 'smartparens-mode))
+
 (line-number-mode t)
 (column-number-mode t)
 
