@@ -361,7 +361,6 @@
 
 (set-frame-parameter nil 'fullscreen 'maximized)
 (set-frame-parameter nil 'alpha 85)
-(set-cursor-color "Blue")
 
 (req whitespace
 ;;; kill -9 fuckin em-space!!!!!!!!!!!!!!!!!!
