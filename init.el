@@ -194,6 +194,7 @@
     emms-player-mpv
     emms-soundcloud
     olivetti
+    paradox
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
