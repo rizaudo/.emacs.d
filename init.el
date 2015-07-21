@@ -385,6 +385,8 @@
          (emms-standard)
          (emms-default-players)
          (setq emms-player-list '(emms-player-mplayer)))
+(req calfw
+     (req calfw-org))
 
 ;;; programming support
 (req undo-tree
