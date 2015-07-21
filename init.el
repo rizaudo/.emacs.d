@@ -239,6 +239,7 @@
      (setq uniquify-buffer-name-style 'post-forward-angle-brackets))
 (req ido)
 (req ido-ubiquitous)
+(ido-mode t)
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode 1)
 (setq ido-enable-prefix nil
