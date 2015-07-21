@@ -372,6 +372,7 @@
            '(
              (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
              (newline-mark 10 [182 10]) ; 10 LINE FEED
+             (space-mark 12288 [?□])
              ))
      (when (not (eq window-system nil))
        (set-face-foreground 'whitespace-tab "#adff2f")
