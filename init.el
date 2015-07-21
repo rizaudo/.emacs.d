@@ -99,6 +99,9 @@
     dash
     elisp-slime-nav
 
+    ;; emacs dev
+    debbugs
+
     ;; CommonLisp
     slime
     ac-slime
