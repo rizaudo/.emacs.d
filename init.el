@@ -224,6 +224,12 @@
   (set-fontset-font "fontset-default"
                     'japanese-jisx0213.2004-1
                     '("Hiragino Maru Gothic ProN"))
+  (set-fontset-font "fontset-default"
+                    'latin-jisx0201
+                    '("DejaVu Sans"))
+  (set-fontset-font "fontset-default"
+                    'japanese-jisx0212
+                    '("DejaVu Sans"))
   )
 
 ;;; emacs lisp setting
