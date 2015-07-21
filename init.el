@@ -582,6 +582,7 @@
 (global-set-key "\M-p" 'scroll-down-command)
 (global-set-key "\M-n" 'scroll-up-command)
 (global-set-key "\C-t" 'other-window)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)
