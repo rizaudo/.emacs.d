@@ -242,6 +242,7 @@
 (ido-mode t)
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode 1)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-auto-merge-work-directories-length nil
