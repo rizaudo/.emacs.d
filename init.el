@@ -198,6 +198,7 @@
     emms-soundcloud
     olivetti
     paradox
+    gnus
     ))
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
@@ -399,6 +400,9 @@
          (setq emms-player-list '(emms-player-mplayer)))
 (req calfw
      (req calfw-org))
+
+(req gnus
+     (setq gnus-completing-read-function 'gnus-ido-completing-read))
 
 ;;; programming support
 (req undo-tree
