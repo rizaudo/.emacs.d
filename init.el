@@ -203,8 +203,6 @@
 
 ;;; org 2 bibtex でbibtex2htmlを要求してた
 
-;(package-refresh-contents)
-
 ;;; my/favorite-packagesからインストールする
 (defun  set-pac ()
   "my package install command"
