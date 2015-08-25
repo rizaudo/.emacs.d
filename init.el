@@ -396,7 +396,9 @@
          (require 'emms-setup)
          (emms-standard)
          (emms-default-players)
-         (setq emms-player-list '(emms-player-mplayer)))
+         (setq emms-player-list '(emms-player-mplayer))
+         (setq emms-source-file-default-directory "~/Music/"))
+
 (req calfw
      (req calfw-org))
 
