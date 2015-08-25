@@ -390,6 +390,8 @@
        (set-face-foreground 'whitespace-space "#7cfc00")
        (set-face-background 'whitespace-space 'nil)
        (set-face-bold 'whitespace-space t)))
+
+;;; work support
 (req emms
          (require 'emms-setup)
          (emms-standard)
