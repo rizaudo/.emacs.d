@@ -83,8 +83,6 @@
 ;;; need el-get <-これでは救われなそう
 (req package
   (addlist 'package-archives
-             ("marmalade" .
-              "http://marmalade-repo.org/packages/")
              ("org" .
               "http://orgmode.org/elpa/")
              ("melpa" .
