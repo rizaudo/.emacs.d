@@ -48,7 +48,7 @@
 
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
-(setq inhibit-startup-message t)
+;; (setq inhibit-startup-message t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'auto-tail-revert-mode 'tail-mode)
 
