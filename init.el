@@ -498,6 +498,7 @@
 
 ;;; Org-mode
 (require 'org)
+(setq org-completion-use-ido t)
 (req ox-latex)
 (req ox-publish)
 (req ox-jekyll
