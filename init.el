@@ -90,6 +90,7 @@
   (package-initialize))
 
 ;;; #PACLIST#
+;;; av package package-activated-list
 (defvar my/favorite-packages
   '(
     ;; emacs lisp lib
