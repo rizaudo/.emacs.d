@@ -699,8 +699,7 @@
 
 ;;; font-lock Experience
 (defface extra-ws
-  '((t (:background "blue" :foreground "black" :height 0.8))
-    :group 'hi-lock-faces)
+  '((t (:background "blue" :foreground "black" :height 0.8)))
   "Used in text-mode and friends for exactly one space after a period.")
 
 (font-lock-add-keywords 'agda2-mode
