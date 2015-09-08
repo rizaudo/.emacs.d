@@ -714,5 +714,25 @@
   (eww-browse-url (concat "http://rubikitch.com/tag/package:" package "/")))
 
 
+(require 'button)
+(defun my/startup-screen ()
+  (let ((buffer (generate-new-buffer "my/startup")))
+    (with-current-buffer buffer
+      (insert-file-contents "~/.emacs.d/banner")
+      (insert "Packages:")
+      (dolist (package (delete-duplicates package-activated-list))
+        (insert (concat (symbol-name package)) " "))
+      ;; (insert-button "fsf"
+      ;;          'action (lambda (x) (browse-url (button-get x 'url)))
+      ;;          'url "http://www.fsf.org")
+      (goto-char (point-min))
+      ;; (insert-image-file "hogehge.png")
+      (setq buffer-read-only t)
+    buffer
+    )))
+
+(setq initial-buffer-choice 'my/startup-screen)
+
+
 (provide 'init)
 ;;; init.el ends here
