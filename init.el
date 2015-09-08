@@ -46,6 +46,17 @@
 
 (setq gc-cons-threshold (* 50 gc-cons-threshold))
 
+(setq x-select-enable-clipboard t
+      x-select-enable-primary t
+      save-interprogram-paste-before-kill t
+      apropos-do-all t
+      mouse-yank-at-point t
+      require-final-newline t
+      load-prefer-newer t
+      save-place-file (concat user-emacs-directory "places")
+      backup-directory-alist `(("." . ,(concat user-emacs-directory
+                                               "backups"))))
+
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 ;; (setq inhibit-startup-message t)
