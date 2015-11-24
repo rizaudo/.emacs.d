@@ -573,11 +573,6 @@
   (add-to-list 'load-path "~/.emacs.d/howm-1.4.2/")
   (req howm
        (setq howm-menu-lang 'ja))
-  ;; ;; YaTeX
-  ;; (setq load-path (cons (expand-file-name "~/.emacs.d/yatex1.77/") load-path))
-  ;; (setq auto-mode-alist
-  ;;       (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
-  ;; (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
   ;; coq
   (add-to-list 'exec-path "/usr/local/bin/")
   (add-to-list 'load-path "/usr/local/opt/coq/lib/emacs/site-lisp/")
