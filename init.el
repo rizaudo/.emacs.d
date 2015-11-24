@@ -181,6 +181,8 @@
     direx
     popwin
     guide-key
+    irfc
+
     ;; project
     projectile
 
@@ -415,6 +417,10 @@
 
 (req gnus
      (setq gnus-completing-read-function 'gnus-ido-completing-read))
+
+(req irfc
+     (setq irfc-directory "~/.emacs.d/irfc")
+     (setq irfc-assoc-mode t))
 
 ;;; programming support
 (req undo-tree
