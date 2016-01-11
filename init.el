@@ -132,8 +132,6 @@
     tuareg
     merlin
 
-    ;; R
-    ess
 
     rainbow-delimiters
     paredit
