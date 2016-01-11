@@ -609,6 +609,7 @@
     (shell-command (concat "open ."))))
 
 ;;; keybind
+(global-unset-key (kbd "C-z"))
 (global-set-key "\M-p" 'scroll-down-command)
 (global-set-key "\M-n" 'scroll-up-command)
 (global-set-key "\C-t" 'other-window)
