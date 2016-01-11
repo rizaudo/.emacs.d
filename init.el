@@ -1,7 +1,7 @@
 ;;;; emacs-setup
 ;;;; for emacs master
 ;;;; 基本的に例外が無い限り最新版を追うこととします
-;;;; 想定環境 Linux(Debian,GuixSD) Mac Windows
+;;;; 想定環境 Linux(Debian,GuixSD,Arch) Mac Windows
 ;;;; 使っているシステムの情報
 ;;;; mac:darwin windows:windows-nt
 
