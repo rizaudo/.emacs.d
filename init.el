@@ -139,9 +139,8 @@
 
     ;; Color-Theme
     color-theme
-    color-theme-molokai
-    tron-theme
     org-beautify-theme
+    cyberpunk-theme
 
     lua-mode
     rainbow-mode
