@@ -598,6 +598,9 @@
   (add-to-list 'load-path "~/.emacs.d/site-lisp")
   )
 
+(when (eq system-type 'gnu/linux)
+  (load-file "~/.emacs.d/ProofGeneral/generic/proof-site.el"))
+
 ;;; my function
 (when (eq system-type 'darwin)
   (defun open-current-dir-with-finder  ()
