@@ -118,7 +118,6 @@
     
     ;; for Clojure settings
     clojure-mode
-    clojurescript-mode
     cider
     ac-cider
     clojure-cheatsheet
