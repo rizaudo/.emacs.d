@@ -156,8 +156,6 @@
     helm-ag
     helm-ls-git
     helm-descbinds
-    helm-R
-    helm-itunes
     ;; term
     multi-term
 
