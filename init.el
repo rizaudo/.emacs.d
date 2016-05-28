@@ -240,6 +240,10 @@
                     '("DejaVu Sans"))
   )
 
+(when (and (eq system-type 'gnu/linux) (not (eq window-system nil)))
+  (set-face-attribute 'default nil :family "Source Han Sans" :height 150)
+  )
+
 ;;; emacs lisp setting
 ;;; M-. 定義元へ M-, 元居た位置へ C-c C-d C-d カーソル下のドキュメント表示
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
