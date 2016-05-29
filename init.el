@@ -601,7 +601,11 @@
   )
 
 (when (eq system-type 'gnu/linux)
-  (load-file "~/.emacs.d/ProofGeneral/generic/proof-site.el"))
+  (load-file "~/.emacs.d/ProofGeneral/generic/proof-site.el")
+  (set-language-environment "japanese")
+  (load "/usr/share/emacs/site-lisp/emacs-mozc/mozc.el")
+  (setq default-input-method "japanese-mozc")
+  )
 
 ;;; my function
 (when (eq system-type 'darwin)
