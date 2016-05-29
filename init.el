@@ -724,7 +724,7 @@
 (defun my/startup-screen ()
   (let ((buffer (generate-new-buffer "my/startup")))
     (with-current-buffer buffer
-      (insert-file-contents "~/.emacs.d/banner")
+      ;; (insert-file-contents "~/.emacs.d/banner")
       (insert "Packages:")
       (dolist (package (delete-duplicates package-activated-list))
         (insert (concat (symbol-name package)) " "))
