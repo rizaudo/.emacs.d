@@ -140,6 +140,7 @@
     color-theme
     org-beautify-theme
     cyberpunk-theme
+    plan9-theme
 
     lua-mode
     rainbow-mode
