@@ -536,7 +536,7 @@
               ))))
 
 (setq org-latex-pdf-process
-      '("latexmk %f"))
+      '("latexmk -pdfdvi %f"))
 (setq org-latex-with-hyperref nil)
 (setq org-latex-listings 'listings)
 (setq org-latex-listings-options
