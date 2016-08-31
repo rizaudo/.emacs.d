@@ -208,8 +208,6 @@
     gnus
     ))
 
-;;; org 2 bibtex でbibtex2htmlを要求してた
-
 ;;; my/favorite-packagesからインストールする
 (defun  set-pac ()
   "my package install command"
