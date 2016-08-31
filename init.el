@@ -422,6 +422,7 @@
 ;;; programming support
 (req undo-tree
      (global-undo-tree-mode))
+(setq-default indent-tabs-mode nil)
 
 ;;; common lisp
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
