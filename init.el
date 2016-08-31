@@ -748,6 +748,8 @@
 
 (setq initial-buffer-choice 'my/startup-screen)
 
+(prefer-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
 
 (provide 'init)
 ;;; init.el ends here
