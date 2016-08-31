@@ -11,6 +11,9 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+(when (= emacs-major-version 25)
+  (setq user-emacs-directory "~/.emacs.d.25/"))
+
 ;;; use commonlisp
 (eval-when-compile
   (require 'cl))
