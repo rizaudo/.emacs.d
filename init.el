@@ -112,6 +112,11 @@
     ;; emacs dev
     debbugs
 
+    ;; C/C++
+    irony
+    irony-eldoc
+    flycheck-irony
+
     ;; CommonLisp
     slime
     ac-slime
@@ -454,6 +459,10 @@
                                     (clj-refactor-mode 1)
                                     ;; insert keybinding setup here
                                     )))
+
+;; C/C++
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
 
 (req auto-complete
      (req auto-complete-config)
