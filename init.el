@@ -468,7 +468,8 @@
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 ;; python
-(elpy-enable)
+(req elpy
+     (elpy-enable))
 
 (req auto-complete
      (req auto-complete-config)
