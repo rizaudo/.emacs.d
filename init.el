@@ -369,7 +369,11 @@
      (sp-use-smartparens-bindings)
      (add-hook 'clojure-mode-hook 'smartparens-mode)
      (add-hook 'cider-repl-mode-hook 'smartparens-mode)
-     (add-hook 'emacs-lisp-mode-hook 'smartparens-mode))
+     (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+     (add-hook 'python-mode-hook 'smartparens-mode)
+     (add-hook 'org-mode-hook 'smartparens-mode)
+     (sp-local-pair 'yatex-mode "$" "$")
+     (sp-local-pair 'org-mode "$" "$"))
 
 (line-number-mode t)
 (column-number-mode t)
