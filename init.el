@@ -585,6 +585,8 @@
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(addlist 'org-src-lang-modes
+         ("latex" . yatex))
 
 ;; TeX
 (setq auto-mode-alist
